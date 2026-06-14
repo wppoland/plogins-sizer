@@ -1,0 +1,163 @@
+/* ==========================================================================
+   Sizer – admin styles (settings + chart builder). Dark-mode aware.
+   ========================================================================== */
+
+.sizer-admin .sizer-tabs {
+	margin-bottom: 1.25rem;
+}
+
+/* Inline help affordance. */
+.sizer-help {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+	margin-inline-start: 6px;
+	padding: 0;
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 1;
+	color: #fff;
+	background: #6b7280;
+	border: 0;
+	border-radius: 50%;
+	cursor: help;
+	vertical-align: middle;
+}
+
+.sizer-help:hover,
+.sizer-help:focus-visible {
+	background: #2563eb;
+}
+
+.sizer-help:focus-visible {
+	outline: 2px solid #2563eb;
+	outline-offset: 2px;
+}
+
+.sizer-tip {
+	max-width: 320px;
+	margin: 0;
+	padding: 0.6rem 0.8rem;
+	font-size: 13px;
+	line-height: 1.5;
+	color: #1a1a1a;
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 8px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* Chart builder. */
+.sizer-charts-intro {
+	max-width: 60ch;
+}
+
+.sizer-chart-card {
+	margin: 0 0 1.25rem;
+	padding: 1rem 1.25rem 1.25rem;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 10px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.sizer-chart-head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.sizer-field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+	font-weight: 600;
+}
+
+.sizer-field span {
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	color: #50575e;
+}
+
+.sizer-delete-chart {
+	margin-inline-start: auto;
+	color: #b32d2e;
+}
+
+.sizer-delete-chart:hover {
+	color: #8a1f20;
+}
+
+.sizer-table-wrap {
+	overflow-x: auto;
+}
+
+.sizer-chart-table {
+	border-collapse: collapse;
+}
+
+.sizer-chart-table th,
+.sizer-chart-table td {
+	padding: 4px;
+	border: 1px solid #e0e0e0;
+}
+
+.sizer-chart-table input[type='text'] {
+	width: 110px;
+	min-width: 80px;
+}
+
+.sizer-chart-table thead input[type='text'] {
+	font-weight: 600;
+}
+
+.sizer-col-add,
+.sizer-row-remove {
+	border: 0 !important;
+	background: transparent;
+}
+
+.sizer-remove-col,
+.sizer-remove-row {
+	margin-inline-start: 4px;
+	color: #b32d2e;
+	cursor: pointer;
+}
+
+.sizer-add-col {
+	min-width: 30px;
+}
+
+.sizer-empty {
+	padding: 1rem;
+	color: #50575e;
+	font-style: italic;
+}
+
+@media (prefers-color-scheme: dark) {
+	.sizer-tip {
+		color: #e8eaed;
+		background: #2c3038;
+		border-color: rgba(255, 255, 255, 0.18);
+	}
+
+	.sizer-chart-card {
+		background: #1e1e1e;
+		border-color: #3c434a;
+	}
+
+	.sizer-field span {
+		color: #a7aaad;
+	}
+
+	.sizer-chart-table th,
+	.sizer-chart-table td {
+		border-color: #3c434a;
+	}
+}

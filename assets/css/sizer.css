@@ -1,0 +1,231 @@
+/* ==========================================================================
+   Sizer – storefront styles for the size-guide trigger, dialog and tables.
+   Themeable via custom properties, accessible, no layout shift.
+   ========================================================================== */
+
+.sizer-trigger {
+	--sizer-accent: #2563eb;
+	--sizer-accent-contrast: #ffffff;
+	--sizer-radius: 8px;
+
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45em;
+	margin: 0.75em 0;
+	font: inherit;
+	line-height: 1.2;
+	cursor: pointer;
+	background: none;
+	border: 0;
+	color: var(--sizer-accent);
+}
+
+.sizer-trigger__icon {
+	flex: 0 0 auto;
+}
+
+.sizer-trigger--button {
+	padding: 0.6em 1.1em;
+	border: 1px solid var(--sizer-accent);
+	border-radius: var(--sizer-radius);
+	background: var(--sizer-accent);
+	color: var(--sizer-accent-contrast);
+	font-weight: 600;
+	transition: filter 0.15s ease, transform 0.05s ease;
+}
+
+.sizer-trigger--button:hover {
+	filter: brightness(0.94);
+}
+
+.sizer-trigger--button:active {
+	transform: translateY(1px);
+}
+
+.sizer-trigger--link {
+	padding: 0;
+	text-decoration: underline;
+	text-underline-offset: 0.18em;
+}
+
+.sizer-trigger--link:hover {
+	text-decoration-thickness: 2px;
+}
+
+.sizer-trigger:focus-visible {
+	outline: 2px solid var(--sizer-accent);
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+
+/* --------------------------------------------------------------- Dialog. */
+
+.sizer-dialog {
+	--sizer-dialog-bg: #ffffff;
+	--sizer-dialog-fg: #1a1a1a;
+	--sizer-border: rgba(0, 0, 0, 0.12);
+	--sizer-head-bg: rgba(0, 0, 0, 0.03);
+
+	width: min(640px, calc(100vw - 2rem));
+	max-width: 100%;
+	padding: 0;
+	border: 0;
+	border-radius: 14px;
+	background: var(--sizer-dialog-bg);
+	color: var(--sizer-dialog-fg);
+	box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+	overflow: hidden;
+}
+
+.sizer-dialog::backdrop {
+	background: rgba(15, 23, 42, 0.55);
+	backdrop-filter: blur(2px);
+}
+
+/* Entry animation, gated behind motion preference. */
+@media (prefers-reduced-motion: no-preference) {
+	.sizer-dialog[open] {
+		animation: sizer-pop 0.18s ease-out;
+	}
+
+	.sizer-dialog[open]::backdrop {
+		animation: sizer-fade 0.18s ease-out;
+	}
+}
+
+@keyframes sizer-pop {
+	from {
+		opacity: 0;
+		transform: translateY(8px) scale(0.98);
+	}
+}
+
+@keyframes sizer-fade {
+	from {
+		opacity: 0;
+	}
+}
+
+.sizer-dialog__inner {
+	display: flex;
+	flex-direction: column;
+	max-height: min(80vh, 720px);
+}
+
+.sizer-dialog__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 1rem 1.25rem;
+	background: var(--sizer-head-bg);
+	border-bottom: 1px solid var(--sizer-border);
+}
+
+.sizer-dialog__title {
+	margin: 0;
+	font-size: clamp(1.05rem, 1rem + 0.5vw, 1.3rem);
+	line-height: 1.2;
+}
+
+.sizer-dialog__close {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	height: 2rem;
+	padding: 0;
+	border: 0;
+	border-radius: 50%;
+	background: transparent;
+	color: inherit;
+	cursor: pointer;
+	transition: background 0.15s ease;
+}
+
+.sizer-dialog__close:hover {
+	background: rgba(0, 0, 0, 0.08);
+}
+
+.sizer-dialog__close:focus-visible {
+	outline: 2px solid var(--sizer-accent, #2563eb);
+	outline-offset: 1px;
+}
+
+.sizer-dialog__body {
+	padding: 1.25rem;
+	overflow-y: auto;
+}
+
+/* ---------------------------------------------------------------- Tables. */
+
+.sizer-chart__scroll {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.sizer-chart__table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.95em;
+}
+
+.sizer-chart__table caption {
+	text-align: start;
+}
+
+.sizer-chart__table th,
+.sizer-chart__table td {
+	padding: 0.55em 0.8em;
+	text-align: start;
+	border: 1px solid var(--sizer-border, rgba(0, 0, 0, 0.12));
+	min-height: 1.5em;
+}
+
+.sizer-chart__table thead th {
+	background: var(--sizer-head-bg, rgba(0, 0, 0, 0.04));
+	font-weight: 600;
+}
+
+.sizer-chart__table tbody th {
+	background: rgba(0, 0, 0, 0.02);
+	font-weight: 600;
+}
+
+.sizer-chart__table tbody tr:nth-child(even) td {
+	background: rgba(0, 0, 0, 0.015);
+}
+
+.sizer-chart__caption {
+	margin: 0.75em 0 0;
+	font-size: 0.85em;
+	opacity: 0.75;
+}
+
+.sizer-chart__empty {
+	margin: 0;
+	opacity: 0.75;
+}
+
+/* The inline tab variant reuses the table styles but needs its own spacing. */
+.sizer-tab__title {
+	margin-top: 0;
+}
+
+/* Respect dark themes that flip the page background. */
+@media (prefers-color-scheme: dark) {
+	.sizer-dialog {
+		--sizer-dialog-bg: #1f2430;
+		--sizer-dialog-fg: #e8eaed;
+		--sizer-border: rgba(255, 255, 255, 0.16);
+		--sizer-head-bg: rgba(255, 255, 255, 0.05);
+	}
+
+	.sizer-chart__table tbody th {
+		background: rgba(255, 255, 255, 0.04);
+	}
+
+	.sizer-chart__table tbody tr:nth-child(even) td {
+		background: rgba(255, 255, 255, 0.03);
+	}
+}
