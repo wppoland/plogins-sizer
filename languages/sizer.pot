@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-14T13:43:45+00:00\n"
+"POT-Creation-Date: 2026-06-14T21:56:35+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: sizer\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #. Description of the plugin
 #: sizer.php
-msgid "Add size guides and size charts to products via an accessible modal or tab."
+msgid "Add size guides and size charts to your WooCommerce products via an accessible modal."
 msgstr ""
 
 #. Author of the plugin
@@ -43,40 +43,25 @@ msgstr ""
 msgid "Sizer - Size Guide and Charts for WooCommerce requires WooCommerce to be active."
 msgstr ""
 
-#: src/Admin/Assignment.php:51
-#: src/Admin/SettingsPage.php:173
-#: src/Admin/SettingsPage.php:184
-#: src/Service/Settings.php:89
+#: src/Admin/Assignment.php:42
+#: src/Admin/SettingsPage.php:122
+#: src/Admin/SettingsPage.php:133
+#: src/Service/Settings.php:46
 msgid "Size guide"
 msgstr ""
 
-#: src/Admin/Assignment.php:74
-#: src/Admin/Assignment.php:115
-#: src/Admin/Assignment.php:130
-#: src/Admin/SettingsPage.php:372
+#: src/Admin/Assignment.php:65
+#: src/Admin/SettingsPage.php:309
 #: templates/single-product/chart-table.php:31
 msgid "Size chart"
 msgstr ""
 
-#: src/Admin/Assignment.php:76
-msgid "Inherit from category"
-msgstr ""
-
-#: src/Admin/Assignment.php:77
-msgid "Choose a chart to show on this product, or leave it to inherit from the product category. Pick \"None\" to hide the guide for this product."
-msgstr ""
-
-#: src/Admin/Assignment.php:117
-#: src/Admin/Assignment.php:134
-msgid "Default size chart for products in this category. Per-product assignments override it."
-msgstr ""
-
-#: src/Admin/Assignment.php:172
-msgid "None (hide for this product)"
-msgstr ""
-
-#: src/Admin/Assignment.php:199
+#: src/Admin/Assignment.php:67
 msgid "— No chart —"
+msgstr ""
+
+#: src/Admin/Assignment.php:68
+msgid "Choose a chart to show on this product, or leave it blank to hide the size guide here."
 msgstr ""
 
 #: src/Admin/SettingsPage.php:46
@@ -92,22 +77,22 @@ msgid "Delete this size chart? This cannot be undone."
 msgstr ""
 
 #: src/Admin/SettingsPage.php:78
-#: src/Admin/SettingsPage.php:408
+#: src/Admin/SettingsPage.php:345
 msgid "Column heading"
 msgstr ""
 
 #: src/Admin/SettingsPage.php:79
-#: src/Admin/SettingsPage.php:410
+#: src/Admin/SettingsPage.php:347
 msgid "Remove column"
 msgstr ""
 
 #: src/Admin/SettingsPage.php:80
-#: src/Admin/SettingsPage.php:430
+#: src/Admin/SettingsPage.php:367
 msgid "Remove row"
 msgstr ""
 
 #: src/Admin/SettingsPage.php:81
-#: src/Admin/SettingsPage.php:427
+#: src/Admin/SettingsPage.php:364
 msgid "Cell value"
 msgstr ""
 
@@ -116,139 +101,91 @@ msgid "Display"
 msgstr ""
 
 #: src/Admin/SettingsPage.php:104
-msgid "Control how the size guide is presented on single product pages. Assign a chart to a product (or a product category) for it to appear."
+msgid "The size guide shows as a button after the add-to-cart button and opens an accessible modal. Assign a chart to a product for it to appear."
 msgstr ""
 
 #: src/Admin/SettingsPage.php:112
-msgid "Trigger style"
-msgstr ""
-
-#: src/Admin/SettingsPage.php:113
-msgid "Placement"
-msgstr ""
-
-#: src/Admin/SettingsPage.php:114
 msgid "Trigger label"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:115
+#: src/Admin/SettingsPage.php:113
 msgid "Modal title"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:126
-msgid "More information"
+#: src/Admin/SettingsPage.php:124
+msgid "The text shown on the button."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:148
-msgid "Whether the entry point renders as a prominent button or a subtle text link."
+#: src/Admin/SettingsPage.php:135
+msgid "Heading shown at the top of the modal. Defaults to the trigger label."
 msgstr ""
 
 #: src/Admin/SettingsPage.php:164
-msgid "Where the guide appears on the product page. \"Product tab\" shows the chart inline in a tab instead of a modal."
-msgstr ""
-
-#: src/Admin/SettingsPage.php:175
-msgid "The text shown on the button, link, or product tab."
-msgstr ""
-
-#: src/Admin/SettingsPage.php:186
-msgid "Heading shown at the top of the modal or tab. Defaults to the trigger label."
-msgstr ""
-
-#: src/Admin/SettingsPage.php:227
 msgid "You are not allowed to manage size charts."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:282
+#: src/Admin/SettingsPage.php:219
 msgid "Settings"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:288
+#: src/Admin/SettingsPage.php:225
 msgid "Size charts"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:314
+#: src/Admin/SettingsPage.php:251
 msgid "Size charts saved."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:323
-msgid "Build reusable charts here, then assign them to a product (Product data → Size guide) or to a product category. Each chart is a simple labelled table."
+#: src/Admin/SettingsPage.php:260
+msgid "Build reusable charts here, then assign them to a product (Product data → Size guide). Each chart is a simple labelled table."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:331
+#: src/Admin/SettingsPage.php:268
 msgid "No size charts yet. Add your first one below."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:344
+#: src/Admin/SettingsPage.php:281
 msgid "+ Add size chart"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:352
+#: src/Admin/SettingsPage.php:289
 msgid "Save charts"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:382
+#: src/Admin/SettingsPage.php:319
 msgid "Chart name"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:385
+#: src/Admin/SettingsPage.php:322
 msgid "e.g. Men's T-Shirts"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:389
+#: src/Admin/SettingsPage.php:326
 msgid "Caption (optional)"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:392
+#: src/Admin/SettingsPage.php:329
 msgid "e.g. All measurements in cm"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:394
+#: src/Admin/SettingsPage.php:331
 msgid "Delete chart"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:394
+#: src/Admin/SettingsPage.php:331
 msgid "Delete"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:409
+#: src/Admin/SettingsPage.php:346
 msgid "Size"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:413
+#: src/Admin/SettingsPage.php:350
 msgid "Add column"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:437
+#: src/Admin/SettingsPage.php:374
 msgid "+ Add row"
-msgstr ""
-
-#: src/Service/Settings.php:28
-msgid "Button"
-msgstr ""
-
-#: src/Service/Settings.php:29
-msgid "Text link"
-msgstr ""
-
-#: src/Service/Settings.php:41
-msgid "After the add-to-cart button"
-msgstr ""
-
-#: src/Service/Settings.php:42
-msgid "Before the add-to-cart button"
-msgstr ""
-
-#: src/Service/Settings.php:43
-msgid "In the product summary"
-msgstr ""
-
-#: src/Service/Settings.php:44
-msgid "In the product meta area"
-msgstr ""
-
-#: src/Service/Settings.php:45
-msgid "As a product tab (no modal)"
 msgstr ""
 
 #: templates/single-product/chart-table.php:23

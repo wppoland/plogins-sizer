@@ -1,10 +1,9 @@
 <?php
 /**
- * The size-guide trigger (button or link) that opens the dialog.
+ * The size-guide trigger button that opens the dialog.
  *
  * @var string $sizer_dialog_id Target dialog element id.
  * @var string $sizer_label     Visible trigger text.
- * @var string $sizer_style     'button' or 'link'.
  *
  * @package Sizer/Templates
  */
@@ -15,7 +14,6 @@ defined('ABSPATH') || exit;
 
 $sizer_dialog_id = isset($sizer_dialog_id) ? (string) $sizer_dialog_id : '';
 $sizer_label     = isset($sizer_label) ? (string) $sizer_label : '';
-$sizer_style     = isset($sizer_style) && 'link' === $sizer_style ? 'link' : 'button';
 
 if ('' === $sizer_dialog_id) {
     return;
@@ -23,7 +21,7 @@ if ('' === $sizer_dialog_id) {
 ?>
 <button
     type="button"
-    class="sizer-trigger sizer-trigger--<?php echo esc_attr($sizer_style); ?>"
+    class="sizer-trigger sizer-trigger--button"
     data-sizer-open="<?php echo esc_attr($sizer_dialog_id); ?>"
     aria-haspopup="dialog"
     aria-controls="<?php echo esc_attr($sizer_dialog_id); ?>"

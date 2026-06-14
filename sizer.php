@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Sizer - Size Guide and Charts for WooCommerce
  * Plugin URI:        https://plogins.com/sizer/
- * Description:        Add size guides and size charts to products via an accessible modal or tab.
+ * Description:        Add size guides and size charts to your WooCommerce products via an accessible modal.
  * Version:           0.1.0
  * Requires at least: 6.5
  * Tested up to:      7.0

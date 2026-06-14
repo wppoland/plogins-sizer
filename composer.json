@@ -1,6 +1,6 @@
 {
     "name": "wppoland/sizer",
-    "description": "Add size guides and size charts to products via an accessible modal or tab.",
+    "description": "Add size guides and size charts to WooCommerce products via an accessible modal.",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
     "require": {

@@ -12,7 +12,7 @@ use Sizer\Service\ChartResolver;
 
 /**
  * Admin assignment UI: a per-product select in the Product data → Size guide
- * panel, plus a per-category select on the product-category term screens.
+ * panel that picks which reusable chart shows on the product page.
  *
  * @package Sizer\Admin
  */
@@ -27,19 +27,10 @@ final class Assignment implements HasHooks
 
     public function registerHooks(): void
     {
-        // Product: add a dedicated tab + panel to the Product data metabox.
         add_filter('woocommerce_product_data_tabs', [$this, 'addProductTab']);
         add_action('woocommerce_product_data_panels', [$this, 'renderProductPanel']);
         add_action('woocommerce_process_product_meta', [$this, 'saveProductMeta']);
-
-        // Category: add + save a chart select on the product_cat term screens.
-        add_action('product_cat_add_form_fields', [$this, 'renderCategoryAddField']);
-        add_action('product_cat_edit_form_fields', [$this, 'renderCategoryEditField']);
-        add_action('created_product_cat', [$this, 'saveCategoryMeta']);
-        add_action('edited_product_cat', [$this, 'saveCategoryMeta']);
     }
-
-    // ---------------------------------------------------------------- Product.
 
     /**
      * @param array<string, array<string, mixed>> $tabs Existing product data tabs.
@@ -73,9 +64,8 @@ final class Assignment implements HasHooks
             ChartResolver::PRODUCT_META,
             __('Size chart', 'sizer'),
             $current,
-            __('Inherit from category', 'sizer'),
-            __('Choose a chart to show on this product, or leave it to inherit from the product category. Pick "None" to hide the guide for this product.', 'sizer'),
-            true,
+            __('— No chart —', 'sizer'),
+            __('Choose a chart to show on this product, or leave it blank to hide the size guide here.', 'sizer'),
         );
         echo '</div>';
         echo '</div>';
@@ -106,71 +96,12 @@ final class Assignment implements HasHooks
         update_post_meta($post_id, ChartResolver::PRODUCT_META, $value);
     }
 
-    // --------------------------------------------------------------- Category.
-
-    public function renderCategoryAddField(): void
-    {
-        echo '<div class="form-field sizer-term-field">';
-        wp_nonce_field(self::NONCE, self::NONCE);
-        printf('<label for="%1$s">%2$s</label>', esc_attr(ChartResolver::TERM_META), esc_html__('Size chart', 'sizer'));
-        $this->termSelect('');
-        echo '<p>' . esc_html__('Default size chart for products in this category. Per-product assignments override it.', 'sizer') . '</p>';
-        echo '</div>';
-    }
-
     /**
-     * @param \WP_Term $term The term being edited.
+     * Render a WooCommerce-styled chart select inside the product panel.
      */
-    public function renderCategoryEditField(\WP_Term $term): void
-    {
-        $current = (string) get_term_meta($term->term_id, ChartResolver::TERM_META, true);
-
-        echo '<tr class="form-field sizer-term-field">';
-        echo '<th scope="row">';
-        printf('<label for="%1$s">%2$s</label>', esc_attr(ChartResolver::TERM_META), esc_html__('Size chart', 'sizer'));
-        echo '</th><td>';
-        wp_nonce_field(self::NONCE, self::NONCE);
-        $this->termSelect($current);
-        echo '<p class="description">' . esc_html__('Default size chart for products in this category. Per-product assignments override it.', 'sizer') . '</p>';
-        echo '</td></tr>';
-    }
-
-    public function saveCategoryMeta(int $term_id): void
-    {
-        // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Verified on next line.
-        $nonce = isset($_POST[self::NONCE]) ? sanitize_text_field(wp_unslash((string) $_POST[self::NONCE])) : '';
-        if ('' === $nonce || ! wp_verify_nonce($nonce, self::NONCE)) {
-            return;
-        }
-
-        if (! current_user_can('manage_product_terms')) {
-            return;
-        }
-
-        // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Nonce verified above.
-        $value = isset($_POST[ChartResolver::TERM_META])
-            ? sanitize_key((string) wp_unslash($_POST[ChartResolver::TERM_META]))
-            : '';
-
-        if ('' === $value) {
-            delete_term_meta($term_id, ChartResolver::TERM_META);
-            return;
-        }
-
-        update_term_meta($term_id, ChartResolver::TERM_META, $value);
-    }
-
-    // ----------------------------------------------------------------- Helpers.
-
-    /**
-     * Render a WooCommerce-styled chart select inside a product panel.
-     */
-    private function selectField(string $id, string $label, string $current, string $blankLabel, string $description, bool $withNone): void
+    private function selectField(string $id, string $label, string $current, string $blankLabel, string $description): void
     {
         $options = ['' => $blankLabel];
-        if ($withNone) {
-            $options['none'] = __('None (hide for this product)', 'sizer');
-        }
         foreach ($this->charts->choices() as $value => $name) {
             $options[$value] = $name;
         }
@@ -189,27 +120,5 @@ final class Assignment implements HasHooks
         echo '</select>';
         printf('<span class="description">%s</span>', esc_html($description));
         echo '</p>';
-    }
-
-    /**
-     * Render a plain chart select for the term screens.
-     */
-    private function termSelect(string $current): void
-    {
-        $options = ['' => __('— No chart —', 'sizer')];
-        foreach ($this->charts->choices() as $value => $name) {
-            $options[$value] = $name;
-        }
-
-        printf('<select id="%1$s" name="%1$s">', esc_attr(ChartResolver::TERM_META));
-        foreach ($options as $value => $name) {
-            printf(
-                '<option value="%1$s" %2$s>%3$s</option>',
-                esc_attr((string) $value),
-                selected($current, (string) $value, false),
-                esc_html((string) $name),
-            );
-        }
-        echo '</select>';
     }
 }

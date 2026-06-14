@@ -102,66 +102,15 @@ final class SettingsPage implements HasHooks
             __('Display', 'sizer'),
             static function (): void {
                 echo '<p>' . esc_html__(
-                    'Control how the size guide is presented on single product pages. Assign a chart to a product (or a product category) for it to appear.',
+                    'The size guide shows as a button after the add-to-cart button and opens an accessible modal. Assign a chart to a product for it to appear.',
                     'sizer',
                 ) . '</p>';
             },
             self::PAGE,
         );
 
-        add_settings_field('trigger_style', __('Trigger style', 'sizer'), [$this, 'fieldTriggerStyle'], self::PAGE, self::SECTION);
-        add_settings_field('placement', __('Placement', 'sizer'), [$this, 'fieldPlacement'], self::PAGE, self::SECTION);
         add_settings_field('trigger_label', __('Trigger label', 'sizer'), [$this, 'fieldTriggerLabel'], self::PAGE, self::SECTION);
         add_settings_field('modal_title', __('Modal title', 'sizer'), [$this, 'fieldModalTitle'], self::PAGE, self::SECTION);
-    }
-
-    /**
-     * Accessible inline help affordance paired with a popover tooltip.
-     */
-    private function help(string $id, string $text): void
-    {
-        printf(
-            '<button type="button" class="sizer-help" popovertarget="%1$s" aria-label="%2$s">?</button>',
-            esc_attr($id),
-            esc_attr__('More information', 'sizer'),
-        );
-        printf(
-            '<span id="%1$s" class="sizer-tip" role="tooltip" popover="auto">%2$s</span>',
-            esc_attr($id),
-            esc_html($text),
-        );
-    }
-
-    public function fieldTriggerStyle(): void
-    {
-        $current = $this->settings->triggerStyle();
-        echo '<select name="' . esc_attr(Settings::OPTION) . '[trigger_style]">';
-        foreach (Settings::triggerStyles() as $value => $label) {
-            printf(
-                '<option value="%1$s" %2$s>%3$s</option>',
-                esc_attr($value),
-                selected($current, $value, false),
-                esc_html($label),
-            );
-        }
-        echo '</select>';
-        $this->help('sizer-tip-style', __('Whether the entry point renders as a prominent button or a subtle text link.', 'sizer'));
-    }
-
-    public function fieldPlacement(): void
-    {
-        $current = $this->settings->placement();
-        echo '<select name="' . esc_attr(Settings::OPTION) . '[placement]">';
-        foreach (Settings::placements() as $value => $label) {
-            printf(
-                '<option value="%1$s" %2$s>%3$s</option>',
-                esc_attr($value),
-                selected($current, $value, false),
-                esc_html($label),
-            );
-        }
-        echo '</select>';
-        $this->help('sizer-tip-placement', __('Where the guide appears on the product page. "Product tab" shows the chart inline in a tab instead of a modal.', 'sizer'));
     }
 
     public function fieldTriggerLabel(): void
@@ -172,7 +121,7 @@ final class SettingsPage implements HasHooks
             esc_attr($this->settings->triggerLabel()),
             esc_attr__('Size guide', 'sizer'),
         );
-        $this->help('sizer-tip-label', __('The text shown on the button, link, or product tab.', 'sizer'));
+        echo '<p class="description">' . esc_html__('The text shown on the button.', 'sizer') . '</p>';
     }
 
     public function fieldModalTitle(): void
@@ -183,7 +132,7 @@ final class SettingsPage implements HasHooks
             esc_attr($this->settings->modalTitle()),
             esc_attr__('Size guide', 'sizer'),
         );
-        $this->help('sizer-tip-title', __('Heading shown at the top of the modal or tab. Defaults to the trigger label.', 'sizer'));
+        echo '<p class="description">' . esc_html__('Heading shown at the top of the modal. Defaults to the trigger label.', 'sizer') . '</p>';
     }
 
     /**
@@ -198,19 +147,7 @@ final class SettingsPage implements HasHooks
             return [];
         }
 
-        $style = isset($raw['trigger_style']) ? sanitize_key((string) $raw['trigger_style']) : 'button';
-        if (! array_key_exists($style, Settings::triggerStyles())) {
-            $style = 'button';
-        }
-
-        $placement = isset($raw['placement']) ? sanitize_key((string) $raw['placement']) : 'after_cart';
-        if (! array_key_exists($placement, Settings::placements())) {
-            $placement = 'after_cart';
-        }
-
         return [
-            'trigger_style' => $style,
-            'placement'     => $placement,
             'trigger_label' => sanitize_text_field((string) ($raw['trigger_label'] ?? '')),
             'modal_title'   => sanitize_text_field((string) ($raw['modal_title'] ?? '')),
         ];
@@ -321,7 +258,7 @@ final class SettingsPage implements HasHooks
         wp_nonce_field(self::SAVE_ACTION);
 
         echo '<p class="description sizer-charts-intro">' . esc_html__(
-            'Build reusable charts here, then assign them to a product (Product data → Size guide) or to a product category. Each chart is a simple labelled table.',
+            'Build reusable charts here, then assign them to a product (Product data → Size guide). Each chart is a simple labelled table.',
             'sizer',
         ) . '</p>';
 

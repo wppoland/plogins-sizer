@@ -2,9 +2,9 @@
 /**
  * Sizer uninstall routine.
  *
- * Removes plugin options when the user deletes the plugin. Per-product and
- * per-category assignments live in post/term meta; we leave those alone so a
- * reinstall keeps existing assignments, but the charts and settings are removed.
+ * Removes plugin options when the user deletes the plugin. Per-product
+ * assignments live in post meta; we leave those alone so a reinstall keeps
+ * existing assignments, but the charts and settings are removed.
  *
  * @package Sizer
  */

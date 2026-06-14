@@ -18,35 +18,6 @@ final class Settings
     private ?array $cache = null;
 
     /**
-     * Trigger styles available for the storefront entry point.
-     *
-     * @return array<string, string>
-     */
-    public static function triggerStyles(): array
-    {
-        return [
-            'button' => __('Button', 'sizer'),
-            'link'   => __('Text link', 'sizer'),
-        ];
-    }
-
-    /**
-     * Placement options: where the size guide appears on the product page.
-     *
-     * @return array<string, string>
-     */
-    public static function placements(): array
-    {
-        return [
-            'after_cart'  => __('After the add-to-cart button', 'sizer'),
-            'before_cart' => __('Before the add-to-cart button', 'sizer'),
-            'summary'     => __('In the product summary', 'sizer'),
-            'meta'        => __('In the product meta area', 'sizer'),
-            'tab'         => __('As a product tab (no modal)', 'sizer'),
-        ];
-    }
-
-    /**
      * All settings, merged over defaults.
      *
      * @return array<string, mixed>
@@ -66,20 +37,6 @@ final class Settings
         }
 
         return $this->cache = array_merge($defaults, $stored);
-    }
-
-    public function triggerStyle(): string
-    {
-        $value = (string) ($this->all()['trigger_style'] ?? 'button');
-
-        return array_key_exists($value, self::triggerStyles()) ? $value : 'button';
-    }
-
-    public function placement(): string
-    {
-        $value = (string) ($this->all()['placement'] ?? 'after_cart');
-
-        return array_key_exists($value, self::placements()) ? $value : 'after_cart';
     }
 
     public function triggerLabel(): string
