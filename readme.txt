@@ -62,6 +62,10 @@ Yes. Build a chart once under WooCommerce → Size Guides, then assign it on eac
 1. The size guide modal on a product page.
 2. Building a reusable size chart in the admin.
 
+== External Services ==
+
+Sizer does not connect to any external services. It makes no API calls and loads no remote scripts, fonts, or stylesheets. Your size charts and button/heading settings are stored in your own WordPress database (the `sizer_charts` and `sizer_settings` options), and each product's assigned chart is kept in that product's `_sizer_chart_id` post meta. No data leaves your site, and nothing is tracked.
+
 == Changelog ==
 
 = 0.1.0 =
