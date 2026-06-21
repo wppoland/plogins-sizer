@@ -49,6 +49,20 @@ final class ChartResolver
             return null;
         }
 
-        return $this->charts->find($chart_id);
+        $chart = $this->charts->find($chart_id);
+
+        if (null === $chart) {
+            return null;
+        }
+
+        /**
+         * Filters a resolved chart before it is rendered.
+         *
+         * @param array{id: string, name: string, caption: string, columns: list<string>, rows: list<list<string>>} $chart   Chart data.
+         * @param \WC_Product                                                                                            $product Product context.
+         */
+        $chart = apply_filters('sizer/chart', $chart, $product);
+
+        return is_array($chart) ? $chart : null;
     }
 }
