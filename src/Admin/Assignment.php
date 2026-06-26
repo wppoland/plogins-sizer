@@ -64,7 +64,7 @@ final class Assignment implements HasHooks
             ChartResolver::PRODUCT_META,
             __('Size chart', 'sizer'),
             $current,
-            __('— No chart —', 'sizer'),
+            __(', No chart, ', 'sizer'),
             __('Choose a chart to show on this product, or leave it blank to hide the size guide here.', 'sizer'),
         );
         echo '</div>';
