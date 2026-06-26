@@ -65,8 +65,8 @@ msgid "Size chart"
 msgstr "Tabela rozmiarów"
 
 #: src/Admin/Assignment.php:67
-msgid "— No chart —"
-msgstr "— Brak tabeli —"
+msgid ", No chart, "
+msgstr ", Brak tabeli, "
 
 #: src/Admin/Assignment.php:68
 msgid ""
@@ -77,8 +77,8 @@ msgstr ""
 "ukryć tutaj przewodnik po rozmiarach."
 
 #: src/Admin/SettingsPage.php:46
-msgid "Sizer — Size Guides"
-msgstr "Sizer — Przewodniki po rozmiarach"
+msgid "Sizer: Size Guides"
+msgstr "Sizer: Przewodniki po rozmiarach"
 
 #: src/Admin/SettingsPage.php:47
 msgid "Size Guides"
@@ -112,7 +112,7 @@ msgstr ""
 msgid ""
 "On any product with a chart assigned, shoppers see a “Size guide” link just "
 "below the add-to-cart button. Selecting it opens an accessible pop-up that "
-"shows the chart. These two settings control the wording shoppers see — leave "
+"shows the chart. These two settings control the wording shoppers see, leave "
 "them as they are and the guide works out of the box."
 msgstr ""
 
@@ -127,7 +127,7 @@ msgstr ""
 #: src/Admin/SettingsPage.php:124
 msgid ""
 "The clickable text shown on the product page that opens the chart. Keep it "
-"short — “Size guide”, “Size chart” or “Find my fit” all read well next to "
+"short, “Size guide”, “Size chart” or “Find my fit” all read well next to "
 "the price."
 msgstr ""
 

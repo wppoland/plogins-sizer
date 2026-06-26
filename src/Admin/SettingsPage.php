@@ -43,7 +43,7 @@ final class SettingsPage implements HasHooks
     {
         add_submenu_page(
             'woocommerce',
-            __('Sizer — Size Guides', 'sizer'),
+            __('Sizer: Size Guides', 'sizer'),
             __('Size Guides', 'sizer'),
             'manage_woocommerce',
             self::PAGE,
@@ -102,7 +102,7 @@ final class SettingsPage implements HasHooks
             __('How the size guide appears', 'sizer'),
             static function (): void {
                 echo '<p class="sizer-section-lead">' . esc_html__(
-                    'On any product with a chart assigned, shoppers see a “Size guide” link just below the add-to-cart button. Selecting it opens an accessible pop-up that shows the chart. These two settings control the wording shoppers see — leave them as they are and the guide works out of the box.',
+                    'On any product with a chart assigned, shoppers see a “Size guide” link just below the add-to-cart button. Selecting it opens an accessible pop-up that shows the chart. These two settings control the wording shoppers see, leave them as they are and the guide works out of the box.',
                     'sizer',
                 ) . '</p>';
             },
@@ -122,7 +122,7 @@ final class SettingsPage implements HasHooks
             esc_attr__('Size guide', 'sizer'),
         );
         echo '<p class="description">' . esc_html__(
-            'The clickable text shown on the product page that opens the chart. Keep it short — “Size guide”, “Size chart” or “Find my fit” all read well next to the price.',
+            'The clickable text shown on the product page that opens the chart. Keep it short, “Size guide”, “Size chart” or “Find my fit” all read well next to the price.',
             'sizer',
         ) . '</p>';
         $this->renderTriggerPreview();

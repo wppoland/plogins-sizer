@@ -57,7 +57,7 @@ msgid "Size chart"
 msgstr ""
 
 #: src/Admin/Assignment.php:67
-msgid "— No chart —"
+msgid ", No chart, "
 msgstr ""
 
 #: src/Admin/Assignment.php:68
@@ -65,7 +65,7 @@ msgid "Choose a chart to show on this product, or leave it blank to hide the siz
 msgstr ""
 
 #: src/Admin/SettingsPage.php:46
-msgid "Sizer — Size Guides"
+msgid "Sizer: Size Guides"
 msgstr ""
 
 #: src/Admin/SettingsPage.php:47
@@ -101,7 +101,7 @@ msgid "How the size guide appears"
 msgstr ""
 
 #: src/Admin/SettingsPage.php:104
-msgid "On any product with a chart assigned, shoppers see a “Size guide” link just below the add-to-cart button. Selecting it opens an accessible pop-up that shows the chart. These two settings control the wording shoppers see — leave them as they are and the guide works out of the box."
+msgid "On any product with a chart assigned, shoppers see a “Size guide” link just below the add-to-cart button. Selecting it opens an accessible pop-up that shows the chart. These two settings control the wording shoppers see, leave them as they are and the guide works out of the box."
 msgstr ""
 
 #: src/Admin/SettingsPage.php:112
@@ -113,7 +113,7 @@ msgid "Pop-up heading"
 msgstr ""
 
 #: src/Admin/SettingsPage.php:124
-msgid "The clickable text shown on the product page that opens the chart. Keep it short — “Size guide”, “Size chart” or “Find my fit” all read well next to the price."
+msgid "The clickable text shown on the product page that opens the chart. Keep it short, “Size guide”, “Size chart” or “Find my fit” all read well next to the price."
 msgstr ""
 
 #: src/Admin/SettingsPage.php:139
