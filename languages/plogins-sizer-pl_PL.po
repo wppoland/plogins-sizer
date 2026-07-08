@@ -12,10 +12,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
-"|| n%100>14) ? 1 : 2);\n"
-"X-Generator: WP-CLI 2.12.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Domain: plogins-sizer\n"
+"X-Generator: WP-CLI 2.12.0\n"
 
 #. Plugin Name of the plugin
 #: sizer.php
@@ -106,7 +105,7 @@ msgstr "Wartość komórki"
 
 #: src/Admin/SettingsPage.php:102
 msgid "How the size guide appears"
-msgstr ""
+msgstr "Sposób wyświetlania przewodnika po rozmiarach"
 
 #: src/Admin/SettingsPage.php:104
 msgid ""
@@ -115,31 +114,41 @@ msgid ""
 "shows the chart. These two settings control the wording shoppers see, leave "
 "them as they are and the guide works out of the box."
 msgstr ""
+"W przypadku każdego produktu z przypisaną tabelą kupujący widzą link "
+"„Przewodnik po rozmiarach” tuż pod przyciskiem „Dodaj do koszyka”. Wybranie "
+"tej opcji powoduje otwarcie dostępnego wyskakującego okienka pokazującego "
+"wykres. Te dwa ustawienia kontrolują treść, którą widzą kupujący. Zostaw je "
+"bez zmian, a przewodnik będzie działać od razu po wyjęciu z pudełka."
 
 #: src/Admin/SettingsPage.php:112
 msgid "Link wording"
-msgstr ""
+msgstr "Treść linku"
 
 #: src/Admin/SettingsPage.php:113
 msgid "Pop-up heading"
-msgstr ""
+msgstr "Wyskakujący nagłówek"
 
 #: src/Admin/SettingsPage.php:124
 msgid ""
 "The clickable text shown on the product page that opens the chart. Keep it "
-"short, “Size guide”, “Size chart” or “Find my fit” all read well next to "
-"the price."
+"short, “Size guide”, “Size chart” or “Find my fit” all read well next to the"
+" price."
 msgstr ""
+"Klikalny tekst wyświetlany na stronie produktu, który otwiera tabelę "
+"rozmiarów. Zachowaj krótką formę – „Przewodnik po rozmiarach”, „Tabela "
+"rozmiarów” lub „Znajdź moje dopasowanie” dobrze czytają się obok ceny."
 
 #: src/Admin/SettingsPage.php:139
 msgid ""
 "The title shown at the top of the pop-up once it opens. Leave it blank to "
 "reuse the link wording above."
 msgstr ""
+"Tytuł wyświetlany u góry wyskakującego okienka po jego otwarciu. Pozostaw to"
+" pole puste, aby ponownie użyć powyższego linku."
 
 #: src/Admin/SettingsPage.php:152
 msgid "Preview"
-msgstr ""
+msgstr "Podgląd"
 
 #: src/Admin/SettingsPage.php:183
 msgid "You are not allowed to manage size charts."
@@ -163,8 +172,8 @@ msgid ""
 "Size guide). Each chart is a simple labelled table."
 msgstr ""
 "Twórz tutaj tabele do wielokrotnego użytku, a następnie przypisuj je do "
-"produktu (Dane produktu → Przewodnik po rozmiarach). Każda tabela to prosta, "
-"opisana tabela."
+"produktu (Dane produktu → Przewodnik po rozmiarach). Każda tabela to prosta,"
+" opisana tabela."
 
 #: src/Admin/SettingsPage.php:289
 msgid "No size charts yet. Add your first one below."
@@ -226,8 +235,8 @@ msgstr "Zamknij przewodnik po rozmiarach"
 #~ msgstr "Wyświetlanie"
 
 #~ msgid ""
-#~ "The size guide shows as a button after the add-to-cart button and opens "
-#~ "an accessible modal. Assign a chart to a product for it to appear."
+#~ "The size guide shows as a button after the add-to-cart button and opens an "
+#~ "accessible modal. Assign a chart to a product for it to appear."
 #~ msgstr ""
 #~ "Przewodnik po rozmiarach wyświetla się jako przycisk za przyciskiem "
 #~ "dodawania do koszyka i otwiera dostępne okno modalne. Przypisz tabelę do "
@@ -242,8 +251,7 @@ msgstr "Zamknij przewodnik po rozmiarach"
 #~ msgid "The text shown on the button."
 #~ msgstr "Tekst wyświetlany na przycisku."
 
-#~ msgid ""
-#~ "Heading shown at the top of the modal. Defaults to the trigger label."
+#~ msgid "Heading shown at the top of the modal. Defaults to the trigger label."
 #~ msgstr ""
 #~ "Nagłówek wyświetlany u góry okna modalnego. Domyślnie zgodny z etykietą "
 #~ "przycisku."
