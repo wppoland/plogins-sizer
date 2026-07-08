@@ -1,0 +1,76 @@
+# wp.org Stable Readme translation (de_DE)
+msgid ""
+msgstr ""
+"Project-Id-Version: sizer Stable Readme\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: plogins-i18n\n"
+
+msgid "Requires Plugins: woocommerce"
+msgstr "Erfordert Plugins: woocommerce"
+
+msgid "Add size guides and size charts to your WooCommerce products via an accessible modal."
+msgstr "Füge deinen WooCommerce-Produkten über ein zugängliches Modal Größenleitfäden und Größentabellen hinzu."
+
+msgid "Sizer adds a \"Size guide\" button to your WooCommerce product pages. Shoppers click it and a size chart opens in a modal, so they can check measurements without leaving the product."
+msgstr "Sizer fügt deinen WooCommerce-Produktseiten eine Schaltfläche „Größenübersicht“ hinzu. Käufer klicken darauf und eine Größentabelle wird in einem Modal geöffnet, sodass sie die Maße überprüfen können, ohne das Produkt zu verlassen."
+
+msgid "You build each chart once in the admin (a labelled table of columns and rows, plus an optional caption) and assign it to whichever products it applies to. The button is injected right after the add-to-cart button. If a product has no chart assigned, nothing is added to the page."
+msgstr "Du erstellen jedes Diagramm einmal im Admin (eine beschriftete Tabelle mit Spalten und Zeilen sowie einer optionalen Beschriftung) und weisen es den Produkten zu, für die es gilt. Die Schaltfläche wird direkt nach der Schaltfläche „In den Warenkorb“ eingefügt. Wenn einem Produkt kein Diagramm zugewiesen ist, wird der Seite nichts hinzugefügt."
+
+msgid "Source and bug reports live on GitHub: https://github.com/wppoland/plogins-sizer"
+msgstr "Quell- und Fehlerberichte live auf GitHub: https://github.com/wppoland/plogins-sizer"
+
+msgid "<strong>What it does</strong>"
+msgstr "<strong>Was es tut</strong>"
+
+msgid "* Build size charts as labelled tables and reuse the same chart across many products.\n* Pick a chart per product from the Product data → Size guide tab.\n* Opens in a native `<dialog>` element with a labelled heading, a close button, and keyboard support.\n* Set the button text and the modal heading from one settings screen.\n* Stylesheet uses CSS custom properties (accent colour, radius, dialog colours) and includes a dark-scheme and reduced-motion variant.\n* No external requests and no tracking; charts are stored in your own database."
+msgstr "* Erstelle Größentabellen als beschriftete Tabellen und verwende dieselbe Tabelle für viele Produkte wieder.\n* Wähle auf der Registerkarte Produktdaten → Größentabelle eine Tabelle pro Produkt aus.\n* Öffnet in einem nativen „<dialog>“-Element mit einer beschrifteten Überschrift, einer Schaltfläche zum Schließen und Tastaturunterstützung.\n* Lege den Schaltflächentext und die modale Überschrift auf einem Einstellungsbildschirm fest.\n* Das Stylesheet verwendet benutzerdefinierte CSS-Eigenschaften (Akzentfarbe, Radius, Dialogfarben) und enthält eine Variante mit dunklem Schema und reduzierter Bewegung.\n* Keine externen Anfragen und kein Tracking; Diagramme werden in deiner eigenen Datenbank gespeichert."
+
+msgid "1. Upload the plugin to `/wp-content/plugins/plogins-sizer`, or install via Plugins → Add New.\n2. Activate it. WooCommerce must be active.\n3. Go to WooCommerce → Size Guides to create a chart and set the button label.\n4. Assign a chart on a product (Product data → Size guide)."
+msgstr "1. Lade das Plugin nach „/wp-content/plugins/plogins-sizer“ hoch oder installiere es über Plugins → Neu hinzufügen.\n2. Aktiviere es. WooCommerce muss aktiv sein.\n3. Gehe zu WooCommerce → Größenrichtlinien, um ein Diagramm zu erstellen und die Schaltflächenbeschriftung festzulegen.\n4. Weise einem Produkt ein Diagramm zu (Produktdaten → Größentabelle)."
+
+msgid "* <strong>Documentation</strong> - https://plogins.com/plogins-sizer/docs/\n* <strong>Plugin page</strong> - https://plogins.com/plogins-sizer/\n* <strong>Source code</strong> - https://github.com/wppoland/plogins-sizer\n* <strong>Bug reports and feature requests</strong> - https://github.com/wppoland/plogins-sizer/issues"
+msgstr "* <strong>Dokumentation</strong> - https://plogins.com/de/plogins-sizer/docs/\n* <strong>Plugin-Seite</strong> - https://plogins.com/de/plogins-sizer/\n* <strong>Quellcode</strong> – https://github.com/wppoland/plogins-sizer\n* <strong>Fehlerberichte und Funktionsanfragen</strong> – https://github.com/wppoland/plogins-sizer/issues"
+
+msgid "Yes. Sizer extends WooCommerce single product pages."
+msgstr "Ja. Sizer erweitert WooCommerce einzelne Produktseiten."
+
+msgid "On the single product page, as a button shown after the add-to-cart button. The button opens the chart in an accessible modal."
+msgstr "Auf der einzelnen Produktseite als Schaltfläche, die nach der Schaltfläche „In den Warenkorb“ angezeigt wird. Die Schaltfläche öffnet das Diagramm in einem zugänglichen Modalformat."
+
+msgid "Yes. Templates can be overridden from your theme under a `sizer/` folder, and the storefront CSS exposes custom properties you can re-theme."
+msgstr "Ja. Vorlagen können in deinem Theme im Ordner „sizer/“ überschrieben werden, und das Storefront-CSS stellt benutzerdefinierte Eigenschaften bereit, die du neu thematisieren können."
+
+msgid "Yes. It uses a native `<dialog>` with a labelled heading, close button, keyboard support and respects `prefers-reduced-motion`."
+msgstr "Ja. Es verwendet ein natives „<dialog>“ mit einer beschrifteten Überschrift, einer Schaltfläche zum Schließen, Tastaturunterstützung und berücksichtigt „prefers-reduced-motion“."
+
+msgid "Yes. Build a chart once under WooCommerce → Size Guides, then assign it on each product's Size guide tab."
+msgstr "Ja. Erstelle einmal unter WooCommerce → Größentabellen ein Diagramm und weise es dann auf der Registerkarte „Größentabelle“ jedes Produkts zu."
+
+msgid "Yes. This plugin is compatible with WordPress Multisite. Network activate it or activate it on individual sites; each site keeps its own settings and data."
+msgstr "Ja. Dieses Plugin ist mit WordPress Multisite kompatibel. Aktiviere es im Netzwerk oder auf einzelnen Websites. Jede Site behält ihre eigenen Einstellungen und Daten."
+
+msgid "1. The size guide modal on a product page.\n2. Building a reusable size chart in the admin."
+msgstr "1. Das Größenleitfaden-Modal auf einer Produktseite.\n2. Erstellen einer wiederverwendbaren Größentabelle im Admin."
+
+msgid "Sizer does not connect to any external services. It makes no API calls and loads no remote scripts, fonts, or stylesheets. Your size charts and button/heading settings are stored in your own WordPress database (the `sizer_charts` and `sizer_settings` options), and each product's assigned chart is kept in that product's `_sizer_chart_id` post meta. No data leaves your site, and nothing is tracked."
+msgstr "Sizer stellt keine Verbindung zu externen Diensten her. Es führt keine API-Aufrufe durch und lädt keine Remote-Skripte, Schriftarten oder Stylesheets. deine Größentabellen und Schaltflächen-/Überschrifteneinstellungen werden in deiner eigenen WordPress-Datenbank gespeichert (die Optionen „sizer_charts“ und „sizer_settings“), und die jedem Produkt zugewiesene Tabelle wird im Post-Meta „_sizer_chart_id“ dieses Produkts gespeichert. Keine Daten verlassen deine Website und nichts wird verfolgt."
+
+msgid "* First stable release."
+msgstr "* Erste stabile Version."
+
+msgid "* Renamed to Plogins Sizer for WooCommerce for a more distinctive plugin name."
+msgstr "* Für einen eindeutigeren Plugin-Namen in Plogins Sizer für WooCommerce umbenannt."
+
+msgid "* `sizer/match_size` filter and `SizeMatcher` service for matching shopper measurements to chart rows.\n* `sizer/chart` filter on resolved chart data before render."
+msgstr "* „Sizer/Match_Size“-Filter und „SizeMatcher“-Dienst zum Abgleichen von Käufermaßen mit Diagrammzeilen.\n* „Sizer/Chart“-Filter für aufgelöste Diagrammdaten vor dem Rendern."
+
+msgid "* `sizer/chart_units` filter and `sizer/chart_controls` action for PRO unit switching on rendered charts."
+msgstr "* „sizer/chart_units“-Filter und „sizer/chart_controls“-Aktion für die PRO-Einheitenumschaltung bei gerenderten Diagrammen."
+
+msgid "* Initial release: reusable size charts, per-product assignment, and an accessible modal shown after the add-to-cart button."
+msgstr "* Erstveröffentlichung: wiederverwendbare Größentabellen, Zuordnung pro Produkt und ein zugängliches Modal, das nach der Schaltfläche „In den Warenkorb“ angezeigt wird."
+

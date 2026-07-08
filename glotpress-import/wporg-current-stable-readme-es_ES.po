@@ -1,0 +1,76 @@
+# wp.org Stable Readme translation (es_ES)
+msgid ""
+msgstr ""
+"Project-Id-Version: sizer Stable Readme\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: plogins-i18n\n"
+
+msgid "Requires Plugins: woocommerce"
+msgstr "Requiere complementos: woocommerce"
+
+msgid "Add size guides and size charts to your WooCommerce products via an accessible modal."
+msgstr "Añade guías de tallas y tablas de tallas a sus productos WooCommerce a través de un modo accesible."
+
+msgid "Sizer adds a \"Size guide\" button to your WooCommerce product pages. Shoppers click it and a size chart opens in a modal, so they can check measurements without leaving the product."
+msgstr "Sizer añade un botón \"Guía de tallas\" a las páginas de sus productos WooCommerce. Los compradores hacen clic en él y se abre una tabla de tallas en un modal, para que puedan verificar las medidas sin salir del producto."
+
+msgid "You build each chart once in the admin (a labelled table of columns and rows, plus an optional caption) and assign it to whichever products it applies to. The button is injected right after the add-to-cart button. If a product has no chart assigned, nothing is added to the page."
+msgstr "Cada gráfico se crea una vez en el administrador (una tabla etiquetada de columnas y filas, más un título opcional) y se asigna a los productos a los que se aplica. El botón se inyecta justo después del botón Añadir al carrito. Si un producto no tiene ningún gráfico asignado, no se añade nada a la página."
+
+msgid "Source and bug reports live on GitHub: https://github.com/wppoland/plogins-sizer"
+msgstr "Informes de fuentes y errores disponibles en GitHub: https://github.com/wppoland/plogins-sizer"
+
+msgid "<strong>What it does</strong>"
+msgstr "<strong>Qué hace</strong>"
+
+msgid "* Build size charts as labelled tables and reuse the same chart across many products.\n* Pick a chart per product from the Product data → Size guide tab.\n* Opens in a native `<dialog>` element with a labelled heading, a close button, and keyboard support.\n* Set the button text and the modal heading from one settings screen.\n* Stylesheet uses CSS custom properties (accent colour, radius, dialog colours) and includes a dark-scheme and reduced-motion variant.\n* No external requests and no tracking; charts are stored in your own database."
+msgstr "* Cree tablas de tallas como tablas etiquetadas y reutilice la misma tabla en muchos productos.\n* Elija una tabla por producto en la pestaña Datos del producto → Guía de tallas.\n* Se abre en un elemento nativo `<dialog>` con un encabezado etiquetado, un botón de cierre y soporte para teclado.\n* Configure el texto del botón y el encabezado modal desde una pantalla de configuración.\n* La hoja de estilo utiliza propiedades personalizadas de CSS (color de acento, radio, colores de diálogo) e incluye un esquema oscuro y una variante de movimiento reducido.\n* Sin solicitudes externas ni seguimiento; Los gráficos se almacenan en su propia base de datos."
+
+msgid "1. Upload the plugin to `/wp-content/plugins/plogins-sizer`, or install via Plugins → Add New.\n2. Activate it. WooCommerce must be active.\n3. Go to WooCommerce → Size Guides to create a chart and set the button label.\n4. Assign a chart on a product (Product data → Size guide)."
+msgstr "1. Cargue el complemento en `/wp-content/plugins/plogins-sizer`, o instálelo a través de Complementos → Añadir nuevo.\n2. Actívalo. WooCommerce debe estar activo.\n3. Vaya a WooCommerce → Guías de tallas para crear un gráfico y configurar la etiqueta del botón.\n4. Asignar una tabla a un producto (Datos del producto → Guía de tallas)."
+
+msgid "* <strong>Documentation</strong> - https://plogins.com/plogins-sizer/docs/\n* <strong>Plugin page</strong> - https://plogins.com/plogins-sizer/\n* <strong>Source code</strong> - https://github.com/wppoland/plogins-sizer\n* <strong>Bug reports and feature requests</strong> - https://github.com/wppoland/plogins-sizer/issues"
+msgstr "* <strong>Documentación</strong> - https://plogins.com/es/plogins-sizer/docs/\n* <strong>Página de complementos</strong> - https://plogins.com/es/plogins-sizer/\n* <strong>Código fuente</strong> - https://github.com/wppoland/plogins-sizer\n* <strong>Informes de errores y solicitudes de funciones</strong> - https://github.com/wppoland/plogins-sizer/issues"
+
+msgid "Yes. Sizer extends WooCommerce single product pages."
+msgstr "Sí. Sizer amplía las páginas de productos individuales de WooCommerce."
+
+msgid "On the single product page, as a button shown after the add-to-cart button. The button opens the chart in an accessible modal."
+msgstr "En la página de un solo producto, como un botón que se muestra después del botón Añadir al carrito. El botón abre el gráfico en un modo accesible."
+
+msgid "Yes. Templates can be overridden from your theme under a `sizer/` folder, and the storefront CSS exposes custom properties you can re-theme."
+msgstr "Sí. Las plantillas se pueden anular desde su tema en una carpeta `sizer/`, y el CSS del escaparate expone propiedades personalizadas que puede cambiar el tema."
+
+msgid "Yes. It uses a native `<dialog>` with a labelled heading, close button, keyboard support and respects `prefers-reduced-motion`."
+msgstr "Sí. Utiliza un `<dialog>` nativo con un encabezado etiquetado, botón de cierre, soporte para teclado y respeta `prefiere movimiento reducido`."
+
+msgid "Yes. Build a chart once under WooCommerce → Size Guides, then assign it on each product's Size guide tab."
+msgstr "Sí. Cree un gráfico una vez en WooCommerce → Guías de tallas, luego asígnelo en la pestaña Guía de tallas de cada producto."
+
+msgid "Yes. This plugin is compatible with WordPress Multisite. Network activate it or activate it on individual sites; each site keeps its own settings and data."
+msgstr "Sí. Este complemento es compatible con WordPress Multisite. Activarlo en red o activarlo en sitios individuales; Cada sitio mantiene su propia configuración y datos."
+
+msgid "1. The size guide modal on a product page.\n2. Building a reusable size chart in the admin."
+msgstr "1. El modal de guía de tallas en la página de un producto.\n2. Crear una tabla de tallas reutilizable en el administrador."
+
+msgid "Sizer does not connect to any external services. It makes no API calls and loads no remote scripts, fonts, or stylesheets. Your size charts and button/heading settings are stored in your own WordPress database (the `sizer_charts` and `sizer_settings` options), and each product's assigned chart is kept in that product's `_sizer_chart_id` post meta. No data leaves your site, and nothing is tracked."
+msgstr "Sizer no se conecta a ningún servicio externo. No realiza llamadas API y no carga scripts, fuentes ni hojas de estilo remotos. Sus tablas de tallas y configuraciones de botones/encabezados se almacenan en su propia base de datos de WordPress (las opciones `sizer_charts` y `sizer_settings`), y la tabla asignada a cada producto se mantiene en el meta de publicación `_sizer_chart_id` de ese producto. No salen datos de tu sitio y no se realiza ningún seguimiento."
+
+msgid "* First stable release."
+msgstr "* Primera versión estable."
+
+msgid "* Renamed to Plogins Sizer for WooCommerce for a more distinctive plugin name."
+msgstr "* Renombrado a Plogins Sizer para WooCommerce para obtener un nombre de complemento más distintivo."
+
+msgid "* `sizer/match_size` filter and `SizeMatcher` service for matching shopper measurements to chart rows.\n* `sizer/chart` filter on resolved chart data before render."
+msgstr "* Filtro `sizer/match_size` y servicio `SizeMatcher` para hacer coincidir las medidas del comprador con las filas del gráfico.\n* Filtro `sizer/chart` en datos de gráficos resueltos antes de renderizar."
+
+msgid "* `sizer/chart_units` filter and `sizer/chart_controls` action for PRO unit switching on rendered charts."
+msgstr "* Filtro `sizer/chart_units` y acción `sizer/chart_controls` para cambiar la unidad PRO en gráficos renderizados."
+
+msgid "* Initial release: reusable size charts, per-product assignment, and an accessible modal shown after the add-to-cart button."
+msgstr "* Lanzamiento inicial: tablas de tallas reutilizables, asignación por producto y un modal accesible que se muestra después del botón Añadir al carrito."
+
