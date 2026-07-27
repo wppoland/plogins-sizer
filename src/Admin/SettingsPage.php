@@ -25,10 +25,17 @@ final class SettingsPage implements HasHooks
     private const SECTION      = 'sizer_display';
     private const SAVE_ACTION  = 'sizer_save_charts';
 
+    private ?ProUpsell $proUpsell = null;
+
     public function __construct(
         private readonly Settings $settings,
         private readonly ChartRepository $charts,
     ) {
+    }
+
+    private function proUpsell(): ProUpsell
+    {
+        return $this->proUpsell ??= new ProUpsell();
     }
 
     public function registerHooks(): void
@@ -37,6 +44,7 @@ final class SettingsPage implements HasHooks
         add_action('admin_init', [$this, 'registerSettings']);
         add_action('admin_post_' . self::SAVE_ACTION, [$this, 'handleChartSave']);
         add_action('admin_enqueue_scripts', [$this, 'enqueueAssets']);
+        $this->proUpsell()->registerHooks();
     }
 
     public function addMenu(): void
@@ -229,6 +237,8 @@ final class SettingsPage implements HasHooks
         echo '<div class="wrap sizer-admin">';
         echo '<h1>' . esc_html(get_admin_page_title()) . '</h1>';
 
+        $this->proUpsell()->banner();
+
         $base = admin_url('admin.php?page=' . self::PAGE);
         echo '<nav class="nav-tab-wrapper sizer-tabs">';
         printf(
@@ -256,6 +266,7 @@ final class SettingsPage implements HasHooks
 
     private function renderSettingsTab(): void
     {
+        echo '<div class="sizer-cols">';
         echo '<form method="post" action="options.php" class="sizer-settings-form">';
         echo '<div class="sizer-panel">';
         settings_fields(self::SETTINGS_GRP);
@@ -263,6 +274,11 @@ final class SettingsPage implements HasHooks
         echo '</div>';
         submit_button();
         echo '</form>';
+
+        $this->proUpsell()->aside();
+        echo '</div>';
+
+        $this->proUpsell()->cards();
     }
 
     private function renderChartsTab(): void

@@ -192,3 +192,110 @@
 		border-color: #3c434a;
 	}
 }
+
+/* ------------------------------------------------------------------ *
+ * PRO upsell — dismissible banner, sidebar promo, "what PRO adds"
+ * locked cards. Pure advertising (no disabled inputs), scoped to
+ * .sizer-admin so nothing leaks into the rest of wp-admin.
+ *
+ * Accent contrast (WCAG):
+ *   Decorative accent  #9c5e0d  — borders, rules, lock glyphs (non-text).
+ *   Button/text accent #7a4a0a  — behind WHITE button text: darker than the
+ *                                 5.22:1 tan, so it clears AA (4.5:1).
+ * ------------------------------------------------------------------ */
+
+.sizer-admin {
+	--sizer-admin-accent: #9c5e0d;       /* decorative tan */
+	--sizer-admin-accent-text: #7a4a0a;  /* darker tan for white-on-accent CTAs */
+	--sizer-pro-muted: #646970;
+	--sizer-pro-radius: 8px;
+	--sizer-pro-radius-sm: 6px;
+	--sizer-pro-gap: 20px;
+}
+
+/* Two-column wrapper (form + promo aside); single column on narrow screens. */
+.sizer-admin .sizer-cols { display: grid; gap: var(--sizer-pro-gap); grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 1100px) {
+	.sizer-admin .sizer-cols { grid-template-columns: minmax(0, 1fr) 300px; }
+}
+
+/* Top banner */
+.sizer-admin .sizer-pro-banner {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	margin: 1em 0 var(--sizer-pro-gap);
+	padding: 12px 16px;
+	border: 1px solid color-mix(in srgb, var(--sizer-admin-accent) 30%, #dcdcde);
+	border-inline-start: 4px solid var(--sizer-admin-accent);
+	border-radius: var(--sizer-pro-radius);
+	background: color-mix(in srgb, var(--sizer-admin-accent) 7%, #fff);
+}
+.sizer-admin .sizer-pro-banner__tag,
+.sizer-admin .sizer-pro-card__badge,
+.sizer-admin .sizer-pro-aside__eyebrow {
+	font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+}
+.sizer-admin .sizer-pro-banner__tag { flex: 0 0 auto; padding: 2px 8px; border-radius: 999px; color: #fff; background: var(--sizer-admin-accent-text); }
+.sizer-admin .sizer-pro-banner__text { flex: 1 1 auto; margin: 0; color: #1d2327; }
+.sizer-admin .sizer-pro-banner__sub { margin-inline-start: 4px; color: var(--sizer-pro-muted); }
+.sizer-admin .sizer-pro-banner__price { margin-inline-start: 6px; color: var(--sizer-pro-muted); font-weight: 600; white-space: nowrap; }
+.sizer-admin .sizer-pro-banner__dismiss { flex: 0 0 auto; font-size: 18px; line-height: 1; text-decoration: none; color: var(--sizer-pro-muted); padding: 4px; border-radius: 4px; }
+.sizer-admin .sizer-pro-banner__dismiss:hover { color: #1d2327; background: rgba(0, 0, 0, .05); }
+
+/* Accent CTA buttons (override WP blue with the readable dark tan) */
+.sizer-admin .sizer-pro-banner__cta.button-primary,
+.sizer-admin .sizer-pro-aside__cta.button-primary {
+	background: var(--sizer-admin-accent-text); border-color: color-mix(in srgb, var(--sizer-admin-accent-text) 80%, #000); color: #fff; text-shadow: none; box-shadow: none;
+}
+.sizer-admin .sizer-pro-banner__cta.button-primary:hover,
+.sizer-admin .sizer-pro-aside__cta.button-primary:hover { background: color-mix(in srgb, var(--sizer-admin-accent-text) 88%, #000); }
+
+/* Sidebar promo card */
+.sizer-admin .sizer-pro-aside {
+	background: #fff; border: 1px solid #dcdcde; border-top: 3px solid var(--sizer-admin-accent); border-radius: var(--sizer-pro-radius); padding: 18px 20px; position: sticky; top: 40px;
+}
+.sizer-admin .sizer-pro-aside__eyebrow { margin: 0 0 4px; color: var(--sizer-admin-accent-text); }
+.sizer-admin .sizer-pro-aside__heading { margin: 0 0 12px; font-size: 16px; line-height: 1.3; }
+.sizer-admin .sizer-pro-aside__list { margin: 0 0 16px; padding: 0; list-style: none; }
+.sizer-admin .sizer-pro-aside__list li { display: flex; align-items: flex-start; gap: 8px; padding: 5px 0; color: #1d2327; font-size: 13px; }
+.sizer-admin .sizer-pro-aside__lock::before,
+.sizer-admin .sizer-pro-card__lock::before { content: "\f160"; font-family: dashicons; font-size: 15px; line-height: 1.2; color: var(--sizer-admin-accent); }
+.sizer-admin .sizer-pro-aside__cta { width: 100%; text-align: center; }
+.sizer-admin .sizer-pro-aside__price { margin: 10px 0 0; font-size: 12px; color: var(--sizer-pro-muted); text-align: center; }
+
+/* "What PRO adds" locked cards */
+.sizer-admin .sizer-pro-cards { max-width: 60rem; margin: var(--sizer-pro-gap) 0 0; }
+.sizer-admin .sizer-pro-cards__title { font-size: 15px; margin: 0 0 12px; }
+.sizer-admin .sizer-pro-cards__grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+.sizer-admin .sizer-pro-card { position: relative; padding: 16px; border: 1px solid #dcdcde; border-radius: var(--sizer-pro-radius-sm); background: color-mix(in srgb, var(--sizer-admin-accent) 3%, #fff); }
+.sizer-admin .sizer-pro-card__badge { position: absolute; top: 12px; inset-inline-end: 12px; padding: 1px 7px; border-radius: 999px; color: var(--sizer-admin-accent-text); border: 1px solid color-mix(in srgb, var(--sizer-admin-accent) 40%, #fff); }
+.sizer-admin .sizer-pro-card__lock { display: inline-block; margin-bottom: 6px; }
+.sizer-admin .sizer-pro-card__title { margin: 0 0 6px; font-size: 14px; line-height: 1.3; }
+.sizer-admin .sizer-pro-card__desc { margin: 0; font-size: 12.5px; line-height: 1.5; color: var(--sizer-pro-muted); }
+
+@media (prefers-reduced-motion: no-preference) {
+	.sizer-admin .sizer-pro-banner__cta, .sizer-admin .sizer-pro-aside__cta { transition: background-color .15s ease, border-color .15s ease; }
+}
+
+/* Dark-mode: match the rest of the Sizer admin surface. The tan shifts to the
+   lighter "tape" tone (#e7a83c on #1e1e1e = 7.99:1) for glyphs and rules, and
+   CTAs keep white text on the mid tan (#9c5e0d, 5.22:1 white-on-tan — AA). */
+@media (prefers-color-scheme: dark) {
+	.sizer-admin {
+		--sizer-admin-accent: #e7a83c;
+		--sizer-admin-accent-text: #9c5e0d;
+		--sizer-pro-muted: #a7aaad;
+	}
+	.sizer-admin .sizer-pro-banner {
+		border-color: #3c434a;
+		background: color-mix(in srgb, var(--sizer-admin-accent) 10%, #1e1e1e);
+	}
+	.sizer-admin .sizer-pro-banner__tag { color: #1a1a1a; background: var(--sizer-admin-accent); }
+	.sizer-admin .sizer-pro-banner__text { color: #e0e0e0; }
+	.sizer-admin .sizer-pro-banner__dismiss:hover { color: #fff; background: rgba(255, 255, 255, .08); }
+	.sizer-admin .sizer-pro-aside,
+	.sizer-admin .sizer-pro-card { background: #1e1e1e; border-color: #3c434a; }
+	.sizer-admin .sizer-pro-aside__list li { color: #e0e0e0; }
+	.sizer-admin .sizer-pro-card__title { color: #e0e0e0; }
+}
