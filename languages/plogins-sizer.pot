@@ -58,7 +58,7 @@ msgid "Size chart"
 msgstr ""
 
 #: src/Admin/Assignment.php:67
-msgid ", No chart, "
+msgid "- No chart -"
 msgstr ""
 
 #: src/Admin/Assignment.php:68

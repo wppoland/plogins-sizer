@@ -65,8 +65,8 @@ msgid "Size chart"
 msgstr "Tabela rozmiarów"
 
 #: src/Admin/Assignment.php:67
-msgid ", No chart, "
-msgstr ", Brak tabeli, "
+msgid "- No chart -"
+msgstr "- Brak tabeli -"
 
 #: src/Admin/Assignment.php:68
 msgid ""
@@ -136,7 +136,7 @@ msgid ""
 "price."
 msgstr ""
 "Klikalny tekst wyświetlany na stronie produktu, który otwiera tabelę "
-"rozmiarów. Zachowaj krótką formę – „Przewodnik po rozmiarach”, „Tabela "
+"rozmiarów. Zachowaj krótką formę, „Przewodnik po rozmiarach”, „Tabela "
 "rozmiarów” lub „Znajdź moje dopasowanie” dobrze czytają się obok ceny."
 
 #: src/Admin/SettingsPage.php:139
