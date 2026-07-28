@@ -64,8 +64,8 @@ msgid "Size chart"
 msgstr "Tabla de tallas"
 
 #: src/Admin/Assignment.php:67
-msgid ", No chart, "
-msgstr ", Sin gráfico,"
+msgid "- No chart -"
+msgstr "- Sin gráfico -"
 
 #: src/Admin/Assignment.php:68
 msgid ""

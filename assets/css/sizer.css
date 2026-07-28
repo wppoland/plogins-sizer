@@ -1,9 +1,9 @@
 /* ==========================================================================
-   Sizer – storefront styles for the size-guide trigger, dialog and tables.
+   Sizer, storefront styles for the size-guide trigger, dialog and tables.
 
    Grounded in the tailor's world: a fibreglass measuring tape. The accent is
    tape-amber (not a default blue), the chart frame carries a tape edge, and the
-   one moment that matters — a shopper finding *their* row — is marked the way a
+   one moment that matters, a shopper finding *their* row, is marked the way a
    tailor lays a tape across a measurement: an amber rule slides in along the
    active size row.
 
@@ -11,7 +11,7 @@
    ========================================================================== */
 
 .sizer-trigger {
-	/* Tailor's-tape amber — the colour of a fibreglass measuring tape.
+	/* Tailor's-tape amber, the colour of a fibreglass measuring tape.
 	   Deepened to clear WCAG AA: as link text on white and behind the
 	   near-white button label it now reads >=4.5:1 (was ~3.4:1). */
 	--sizer-accent: #9c5e0d;
@@ -216,7 +216,7 @@
 	border-bottom-right-radius: 10px;
 }
 
-/* The first column is the size label — a printed tape edge runs down it. */
+/* The first column is the size label, a printed tape edge runs down it. */
 .sizer-chart__table tbody th {
 	position: relative;
 	background: rgba(0, 0, 0, 0.02);
@@ -231,7 +231,7 @@
 /* ----------------------------------------------------- The tape measure.
 
    THE MOMENT: a shopper hovering or keyboard-focusing a size row sees a
-   tailor's tape laid across exactly that size — an amber band ticked like a
+   tailor's tape laid across exactly that size, an amber band ticked like a
    measuring tape slides in along the row's leading (size-label) edge.
    ------------------------------------------------------------------------- */
 
@@ -242,7 +242,7 @@
 	width: 13px;
 	border-radius: 3px;
 	/* Fibreglass measuring tape: an amber band ruled with graduation ticks
-	   that run across it — long marks every other step, like real tape. */
+	   that run across it, long marks every other step, like real tape. */
 	background:
 		repeating-linear-gradient(
 			to bottom,

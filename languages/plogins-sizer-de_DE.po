@@ -19,7 +19,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #: sizer.php
 msgid "Sizer - Size Guide and Charts for WooCommerce"
-msgstr "Sizer – Größenleitfaden und Diagramme für WooCommerce"
+msgstr "Sizer, Größenleitfaden und Diagramme für WooCommerce"
 
 #. Plugin URI of the plugin
 #: sizer.php
@@ -50,7 +50,7 @@ msgid ""
 "Sizer - Size Guide and Charts for WooCommerce requires WooCommerce to be "
 "active."
 msgstr ""
-"Sizer – Größenleitfaden und Diagramme für WooCommerce erfordert, dass "
+"Sizer, Größenleitfaden und Diagramme für WooCommerce erfordert, dass "
 "WooCommerce aktiv ist."
 
 #: src/Admin/Assignment.php:42 src/Admin/SettingsPage.php:122
@@ -64,8 +64,8 @@ msgid "Size chart"
 msgstr "Größentabelle"
 
 #: src/Admin/Assignment.php:67
-msgid ", No chart, "
-msgstr ", Kein Diagramm,"
+msgid "- No chart -"
+msgstr "- Kein Diagramm -"
 
 #: src/Admin/Assignment.php:68
 msgid ""

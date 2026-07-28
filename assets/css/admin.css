@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Sizer – admin styles (settings + chart builder). Dark-mode aware.
+   Sizer, admin styles (settings + chart builder). Dark-mode aware.
    ========================================================================== */
 
 .sizer-admin .sizer-tabs {
@@ -36,7 +36,7 @@
 	color: #50575e;
 }
 
-/* Storefront trigger preview — show, don't just toggle. */
+/* Storefront trigger preview, show, don't just toggle. */
 .sizer-preview {
 	display: flex;
 	align-items: center;
@@ -49,7 +49,7 @@
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
-	color: #50575e; /* 7.0:1 on #fff — AA */
+	color: #50575e; /* 7.0:1 on #fff, AA */
 }
 
 .sizer-preview-trigger {
@@ -58,7 +58,7 @@
 	font-size: 13px;
 	font-weight: 600;
 	color: #fff;
-	background: #9c5e0d; /* button-like; 5.22:1 white-on-tan — AA text */
+	background: #9c5e0d; /* button-like; 5.22:1 white-on-tan, AA text */
 	border-radius: 6px;
 }
 
@@ -194,13 +194,13 @@
 }
 
 /* ------------------------------------------------------------------ *
- * PRO upsell — dismissible banner, sidebar promo, "what PRO adds"
+ * PRO upsell, dismissible banner, sidebar promo, "what PRO adds"
  * locked cards. Pure advertising (no disabled inputs), scoped to
  * .sizer-admin so nothing leaks into the rest of wp-admin.
  *
  * Accent contrast (WCAG):
- *   Decorative accent  #9c5e0d  — borders, rules, lock glyphs (non-text).
- *   Button/text accent #7a4a0a  — behind WHITE button text: darker than the
+ *   Decorative accent  #9c5e0d, borders, rules, lock glyphs (non-text).
+ *   Button/text accent #7a4a0a, behind WHITE button text: darker than the
  *                                 5.22:1 tan, so it clears AA (4.5:1).
  * ------------------------------------------------------------------ */
 
@@ -280,7 +280,7 @@
 
 /* Dark-mode: match the rest of the Sizer admin surface. The tan shifts to the
    lighter "tape" tone (#e7a83c on #1e1e1e = 7.99:1) for glyphs and rules, and
-   CTAs keep white text on the mid tan (#9c5e0d, 5.22:1 white-on-tan — AA). */
+   CTAs keep white text on the mid tan (#9c5e0d, 5.22:1 white-on-tan, AA). */
 @media (prefers-color-scheme: dark) {
 	.sizer-admin {
 		--sizer-admin-accent: #e7a83c;
