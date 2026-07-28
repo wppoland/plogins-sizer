@@ -274,8 +274,10 @@ final class SettingsPage implements HasHooks
         echo '</div>';
         submit_button();
         echo '</form>';
+
         $this->proUpsell()->aside();
         echo '</div>';
+
         $this->proUpsell()->cards();
     }
 

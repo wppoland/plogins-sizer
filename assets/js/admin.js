@@ -1,5 +1,5 @@
 /**
- * Sizer – admin chart builder.
+ * Sizer, admin chart builder.
  *
  * Dynamically manages chart cards (add/delete) and their tables (add/remove
  * columns and rows). Field names use a per-chart index; new charts are cloned
