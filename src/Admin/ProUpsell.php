@@ -6,8 +6,6 @@ namespace Sizer\Admin;
 
 defined('ABSPATH') || exit;
 
-use Sizer\Plugin;
-
 /**
  * PRO upgrade promotion, shown ONLY on the Sizer settings screen: a dismissible
  * top banner, a sidebar promo panel, and a "what PRO adds" locked-card list.
@@ -35,10 +33,16 @@ final class ProUpsell
     private function data(): array
     {
         if ($this->data === null) {
-            $file = Plugin::instance()->path('config/pro-upsell.php');
+            $file = SIZER_DIR . 'config/pro-upsell.php';
             $this->data = is_readable($file) ? (array) require $file : [];
         }
         return $this->data;
+    }
+
+    /** Whether the PRO edition can actually be bought yet. */
+    private function sellable(): bool
+    {
+        return (bool) ($this->data()['sellable'] ?? false);
     }
 
     /** Whether to render the promo at all (filterable for white-label builds). */
@@ -54,11 +58,11 @@ final class ProUpsell
 
     private function url(): string
     {
-        $default = (string) ($this->data()['url'] ?? 'https://plogins.com/plogins-sizer-pro/pricing/');
+        $default = (string) ($this->data()['url'] ?? 'https://plogins.com/plogins-sizer-pro/');
         /**
-         * Filters the URL the "Upgrade to PRO" buttons point at.
+         * Filters the URL the PRO call-to-action buttons point at.
          *
-         * @param string $url Default the Sizer PRO pricing page.
+         * @param string $url Default the Sizer PRO page.
          */
         return (string) apply_filters('sizer/pro_url', $default);
     }
@@ -70,6 +74,9 @@ final class ProUpsell
 
     private function priceLabel(): string
     {
+        if (! $this->sellable()) {
+            return $this->isPolish() ? __('Wkrótce', 'plogins-sizer') : __('Coming soon', 'plogins-sizer');
+        }
         $d = $this->data();
         if ($this->isPolish() && ! empty($d['price_pln'])) {
             /* translators: %d: yearly price in PLN */
@@ -81,6 +88,14 @@ final class ProUpsell
             return sprintf(__('from %1$s%2$d/yr', 'plogins-sizer'), $cur, (int) $d['price_from']);
         }
         return '';
+    }
+
+    /** The call-to-action label: buy when sellable, otherwise a soft notify. */
+    private function ctaLabel(): string
+    {
+        return $this->sellable()
+            ? __('Upgrade to PRO', 'plogins-sizer')
+            : ($this->isPolish() ? __('Powiadom mnie', 'plogins-sizer') : __('Get notified', 'plogins-sizer'));
     }
 
     /** @return array<int, array{title: string, desc: string}> */
@@ -145,7 +160,7 @@ final class ProUpsell
                 <?php if ($price !== '') : ?><span class="sizer-pro-banner__price"><?php echo esc_html($price); ?></span><?php endif; ?>
             </p>
             <a class="button button-primary sizer-pro-banner__cta" href="<?php echo esc_url($this->url()); ?>" target="_blank" rel="noopener noreferrer">
-                <?php esc_html_e('Upgrade to PRO', 'plogins-sizer'); ?>
+                <?php echo esc_html($this->ctaLabel()); ?>
             </a>
             <a class="sizer-pro-banner__dismiss" href="<?php echo esc_url($this->dismissUrl()); ?>" aria-label="<?php esc_attr_e('Dismiss this notice', 'plogins-sizer'); ?>">&times;</a>
         </div>
@@ -162,7 +177,7 @@ final class ProUpsell
         $price    = $this->priceLabel();
         $features = $this->features();
         ?>
-        <aside class="sizer-pro-aside" aria-labelledby="sizer-pro-aside-h">
+        <aside class="sizer-card sizer-pro-aside" aria-labelledby="sizer-pro-aside-h">
             <p class="sizer-pro-aside__eyebrow"><?php echo esc_html($name); ?></p>
             <h2 id="sizer-pro-aside-h" class="sizer-pro-aside__heading"><?php esc_html_e('Unlock every PRO feature', 'plogins-sizer'); ?></h2>
             <ul class="sizer-pro-aside__list">
@@ -174,10 +189,10 @@ final class ProUpsell
                 <?php endforeach; ?>
             </ul>
             <a class="button button-primary button-hero sizer-pro-aside__cta" href="<?php echo esc_url($this->url()); ?>" target="_blank" rel="noopener noreferrer">
-                <?php esc_html_e('Upgrade to PRO', 'plogins-sizer'); ?>
+                <?php echo esc_html($this->ctaLabel()); ?>
             </a>
             <?php if ($price !== '') : ?>
-                <p class="sizer-pro-aside__price"><?php echo esc_html($price); ?> · <?php esc_html_e('one licence, every PRO feature', 'plogins-sizer'); ?></p>
+                <p class="sizer-pro-aside__price"><?php echo esc_html($price); ?><?php if ($this->sellable()) : ?> · <?php esc_html_e('one licence, every PRO feature', 'plogins-sizer'); ?><?php endif; ?></p>
             <?php endif; ?>
         </aside>
         <?php

@@ -2,7 +2,7 @@
 /**
  * Autoloading: prefer Composer's vendor autoloader (the optimized classmap when
  * present). Fall back to a minimal PSR-4 autoloader so the plugin still boots if
- * vendor/ is somehow absent. Sizer is fully self-contained — no runtime deps.
+ * vendor/ is somehow absent. Sizer is fully self-contained, no runtime deps.
  *
  * @package Sizer
  */
