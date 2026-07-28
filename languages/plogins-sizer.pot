@@ -26,7 +26,9 @@ msgstr ""
 
 #. Description of the plugin
 #: sizer.php
-msgid "Add size guides and size charts to your WooCommerce products via an accessible modal."
+msgid ""
+"Add size guides and size charts to your WooCommerce products via an "
+"accessible modal."
 msgstr ""
 
 #. Author of the plugin
@@ -40,18 +42,17 @@ msgid "https://plogins.com/"
 msgstr ""
 
 #: sizer.php:55
-msgid "Sizer - Size Guide and Charts for WooCommerce requires WooCommerce to be active."
+msgid ""
+"Sizer - Size Guide and Charts for WooCommerce requires WooCommerce to be "
+"active."
 msgstr ""
 
-#: src/Admin/Assignment.php:42
-#: src/Admin/SettingsPage.php:122
-#: src/Admin/SettingsPage.php:137
-#: src/Service/Settings.php:46
+#: src/Admin/Assignment.php:42 src/Admin/SettingsPage.php:122
+#: src/Admin/SettingsPage.php:137 src/Service/Settings.php:46
 msgid "Size guide"
 msgstr ""
 
-#: src/Admin/Assignment.php:65
-#: src/Admin/SettingsPage.php:330
+#: src/Admin/Assignment.php:65 src/Admin/SettingsPage.php:330
 #: templates/single-product/chart-table.php:31
 msgid "Size chart"
 msgstr ""
@@ -61,7 +62,9 @@ msgid ", No chart, "
 msgstr ""
 
 #: src/Admin/Assignment.php:68
-msgid "Choose a chart to show on this product, or leave it blank to hide the size guide here."
+msgid ""
+"Choose a chart to show on this product, or leave it blank to hide the size "
+"guide here."
 msgstr ""
 
 #: src/Admin/SettingsPage.php:46
@@ -76,23 +79,19 @@ msgstr ""
 msgid "Delete this size chart? This cannot be undone."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:78
-#: src/Admin/SettingsPage.php:366
+#: src/Admin/SettingsPage.php:78 src/Admin/SettingsPage.php:366
 msgid "Column heading"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:79
-#: src/Admin/SettingsPage.php:368
+#: src/Admin/SettingsPage.php:79 src/Admin/SettingsPage.php:368
 msgid "Remove column"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:80
-#: src/Admin/SettingsPage.php:388
+#: src/Admin/SettingsPage.php:80 src/Admin/SettingsPage.php:388
 msgid "Remove row"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:81
-#: src/Admin/SettingsPage.php:385
+#: src/Admin/SettingsPage.php:81 src/Admin/SettingsPage.php:385
 msgid "Cell value"
 msgstr ""
 
@@ -101,7 +100,11 @@ msgid "How the size guide appears"
 msgstr ""
 
 #: src/Admin/SettingsPage.php:104
-msgid "On any product with a chart assigned, shoppers see a “Size guide” link just below the add-to-cart button. Selecting it opens an accessible pop-up that shows the chart. These two settings control the wording shoppers see, leave them as they are and the guide works out of the box."
+msgid ""
+"On any product with a chart assigned, shoppers see a “Size guide” link just "
+"below the add-to-cart button. Selecting it opens an accessible pop-up that "
+"shows the chart. These two settings control the wording shoppers see, leave "
+"them as they are and the guide works out of the box."
 msgstr ""
 
 #: src/Admin/SettingsPage.php:112
@@ -113,11 +116,16 @@ msgid "Pop-up heading"
 msgstr ""
 
 #: src/Admin/SettingsPage.php:124
-msgid "The clickable text shown on the product page that opens the chart. Keep it short, “Size guide”, “Size chart” or “Find my fit” all read well next to the price."
+msgid ""
+"The clickable text shown on the product page that opens the chart. Keep it "
+"short, “Size guide”, “Size chart” or “Find my fit” all read well next to the "
+"price."
 msgstr ""
 
 #: src/Admin/SettingsPage.php:139
-msgid "The title shown at the top of the pop-up once it opens. Leave it blank to reuse the link wording above."
+msgid ""
+"The title shown at the top of the pop-up once it opens. Leave it blank to "
+"reuse the link wording above."
 msgstr ""
 
 #: src/Admin/SettingsPage.php:152
@@ -141,7 +149,9 @@ msgid "Size charts saved."
 msgstr ""
 
 #: src/Admin/SettingsPage.php:281
-msgid "Build reusable charts here, then assign them to a product (Product data → Size guide). Each chart is a simple labelled table."
+msgid ""
+"Build reusable charts here, then assign them to a product (Product data → "
+"Size guide). Each chart is a simple labelled table."
 msgstr ""
 
 #: src/Admin/SettingsPage.php:289
@@ -198,4 +208,64 @@ msgstr ""
 
 #: templates/single-product/dialog.php:36
 msgid "Close size guide"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr ""
+
+#. translators: %d: yearly price in PLN
+#: src/Admin/ProUpsell.php:83
+#, php-format
+msgid "od %d zł/rok"
+msgstr ""
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:88
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:97
+msgid "Upgrade to PRO"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:98
+msgid "Powiadom mnie"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:98
+msgid "Get notified"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:128
+msgid "Permission denied."
+msgstr ""
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:158
+#, php-format
+msgid "Do more with %s"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:165
+msgid "Dismiss this notice"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:182
+msgid "Unlock every PRO feature"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:195
+msgid "one licence, every PRO feature"
+msgstr ""
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:214
+#, php-format
+msgid "What %s adds"
 msgstr ""
