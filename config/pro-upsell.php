@@ -30,16 +30,16 @@ return [
             'pl' => ['title' => 'Tabele per wariant', 'desc' => 'Pokaz innej tabeli zależnie od wariantu wybranego przez klienta (wdrożone).'],
         ],
         [
-            'en' => ['title' => 'Unit switching', 'desc' => 'Toggle the chart between cm and inch with one control (UnitSwitch, shipped).'],
-            'pl' => ['title' => 'Przełączanie jednostek', 'desc' => 'Zmiana tabeli między cm a calami jednym przełącznikiem (UnitSwitch, wdrożone).'],
+            'en' => ['title' => 'Unit switching', 'desc' => 'Toggle the chart between cm and inch with one control (shipped).'],
+            'pl' => ['title' => 'Przełączanie jednostek', 'desc' => 'Zmiana tabeli między cm a calami jednym przełącznikiem (wdrożone).'],
         ],
         [
-            'en' => ['title' => 'Find my size', 'desc' => 'Measurement form that suggests a size from the chart (FindMySize, shipped).'],
-            'pl' => ['title' => 'Znajdź mój rozmiar', 'desc' => 'Formularz pomiarów sugerujący rozmiar na podstawie tabeli (FindMySize, wdrożone).'],
+            'en' => ['title' => 'Find my size', 'desc' => 'Measurement form that suggests a size from the chart (shipped).'],
+            'pl' => ['title' => 'Znajdź mój rozmiar', 'desc' => 'Formularz pomiarów sugerujący rozmiar na podstawie tabeli (wdrożone).'],
         ],
         [
-            'en' => ['title' => 'Import / export', 'desc' => 'JSON backup for all charts or CSV for a single chart (ChartImportExport, shipped).'],
-            'pl' => ['title' => 'Import / eksport', 'desc' => 'Backup JSON wszystkich tabel lub CSV pojedynczej tabeli (ChartImportExport, wdrożone).'],
+            'en' => ['title' => 'Import / export', 'desc' => 'JSON backup for all charts or CSV for a single chart (shipped).'],
+            'pl' => ['title' => 'Import / eksport', 'desc' => 'Backup JSON wszystkich tabel lub CSV pojedynczej tabeli (wdrożone).'],
         ],
     ],
 ];
