@@ -17,7 +17,7 @@ Sizer adds a "Size guide" button to your WooCommerce product pages. Shoppers cli
 
 You build each chart once in the admin (a labelled table of columns and rows, plus an optional caption) and assign it to whichever products it applies to. The button is injected right after the add-to-cart button. If a product has no chart assigned, nothing is added to the page.
 
-Source and bug reports live on GitHub: https://github.com/wppoland/plogins-sizer
+Source and bug reports live on GitHub: [github.com/wppoland/plogins-sizer](https://github.com/wppoland/plogins-sizer)
 
 **What it does**
 
@@ -39,10 +39,10 @@ Source and bug reports live on GitHub: https://github.com/wppoland/plogins-sizer
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/plogins-sizer/docs/
-* **Plugin page** - https://plogins.com/plogins-sizer/
-* **Source code** - https://github.com/wppoland/plogins-sizer
-* **Bug reports and feature requests** - https://github.com/wppoland/plogins-sizer/issues
+* **Documentation**: [plogins.com/plogins-sizer/docs/](https://plogins.com/plogins-sizer/docs/)
+* **Plugin page**: [plogins.com/plogins-sizer/](https://plogins.com/plogins-sizer/)
+* **Source code**: [github.com/wppoland/plogins-sizer](https://github.com/wppoland/plogins-sizer)
+* **Bug reports and feature requests**: [github.com/wppoland/plogins-sizer/issues](https://github.com/wppoland/plogins-sizer/issues)
 
 
 = Does it require WooCommerce? =
