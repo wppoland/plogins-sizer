@@ -15,7 +15,6 @@ return [
     'sellable'   => true,
     'price_from' => 29,
     'currency'   => 'EUR',
-    'price_pln'  => 129,
     'lead'       => [
         'en' => 'The 0.4.0 release completes the Track 3 roadmap wedge list.',
         'pl' => 'Wydanie 0.4.0 dostarcza pełny zestaw funkcji roadmapy Track 3.',
