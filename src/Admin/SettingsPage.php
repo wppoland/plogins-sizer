@@ -10,6 +10,7 @@ use Sizer\Contract\HasHooks;
 use Sizer\Plugin;
 use Sizer\Repository\ChartRepository;
 use Sizer\Service\Settings;
+use Sizer\Service\Texts;
 
 /**
  * WooCommerce submenu admin: a two-tab page for global display settings and the
@@ -123,11 +124,14 @@ final class SettingsPage implements HasHooks
 
     public function fieldTriggerLabel(): void
     {
+        // The field edits the RAW stored value, never the resolved one: showing
+        // the translated default here would save it back on the next submit and
+        // freeze that language into the option.
         printf(
             '<input type="text" class="regular-text" name="%1$s[trigger_label]" value="%2$s" placeholder="%3$s" />',
             esc_attr(Settings::OPTION),
-            esc_attr($this->settings->triggerLabel()),
-            esc_attr__('Size guide', 'plogins-sizer'),
+            esc_attr((string) ($this->settings->raw()['trigger_label'] ?? '')),
+            esc_attr(Texts::defaults()['trigger_label']),
         );
         echo '<p class="description">' . esc_html__(
             'The clickable text shown on the product page that opens the chart. Keep it short, “Size guide”, “Size chart” or “Find my fit” all read well next to the price.',
@@ -141,8 +145,8 @@ final class SettingsPage implements HasHooks
         printf(
             '<input type="text" class="regular-text" name="%1$s[modal_title]" value="%2$s" placeholder="%3$s" />',
             esc_attr(Settings::OPTION),
-            esc_attr($this->settings->modalTitle()),
-            esc_attr__('Size guide', 'plogins-sizer'),
+            esc_attr((string) ($this->settings->raw()['modal_title'] ?? '')),
+            esc_attr($this->settings->triggerLabel()),
         );
         echo '<p class="description">' . esc_html__(
             'The title shown at the top of the pop-up once it opens. Leave it blank to reuse the link wording above.',

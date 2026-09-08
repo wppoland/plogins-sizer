@@ -4,7 +4,7 @@ Tags: woocommerce, size guide, size chart, product, fashion
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -84,6 +84,9 @@ Sizer does not connect to any external services. It makes no API calls and loads
 Plogins Sizer is fully translatable and ships the `plogins-sizer.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.10 =
+* Fixed the size guide showing English on a translated shop. The link wording ("Size guide") and the pop-up heading were shipped as plain text in a config file and written into the database when the plugin was activated, so they were never part of the translation files and no language pack could reach them. Both now default to a translatable string, so they follow the site language as soon as a translation exists. Translations are delivered by WordPress.org language packs rather than bundled here, so the wording stays English until a pack is published. If you never changed the wording, the old English value is cleared on update and the translated one takes over; wording you typed yourself, in any language, is left exactly as it is.
 
 = 1.0.9 =
 * Renamed to Plogins Sizer - Size Guide for WooCommerce so the name leads with the brand rather than a generic word, which is what the WordPress.org plugin review team asks for. The plugin slug is unchanged.
