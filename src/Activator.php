@@ -22,6 +22,12 @@ final class Activator
             add_option(self::OPTION, $defaults);
         }
 
-        update_option('sizer_db_version', VERSION, false);
+        // Deliberately NOT stamping sizer_db_version here. Activation runs before
+        // Migrator::maybeMigrate(), so writing the current version would tell the
+        // migrator there is nothing to do: on the deactivate, update, reactivate
+        // path the text sweep would be skipped for good and the shop would keep
+        // the frozen English label forever. Let the migrator stamp it once it has
+        // actually done its work.
+        (new Migrator())->maybeMigrate();
     }
 }
