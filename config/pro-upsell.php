@@ -21,7 +21,7 @@ return [
     ],
     'features'   => [
         [
-            'en' => ['title' => 'Store-wide default chart', 'desc' => 'Fallback chart for products with no per-product or category assignment (shipped).'],
+            'en' => ['title' => 'Store-wide default chart', 'desc' => 'Fallback chart for every product with no chart of its own (shipped).'],
             'pl' => ['title' => 'Domyślna tabela rozmiarów', 'desc' => 'Tabela zapasowa dla produktów bez własnego przypisania (wdrożone).'],
         ],
         [
