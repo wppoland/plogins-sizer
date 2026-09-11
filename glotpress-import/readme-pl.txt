@@ -22,7 +22,7 @@ Kod źródłowy i zgłoszenia błędów znajdziesz na GitHubie: https://github.c
 <strong>Co potrafi</strong>
 
 * Buduj tabele rozmiarów jako opisane tabele i używaj tej samej tabeli w wielu produktach.
-* Wybierz tabelę dla każdego produktu w zakładce Dane produktu → Przewodnik po rozmiarach.
+* Wybierz tabelę dla każdego produktu w zakładce Dane produktu > Przewodnik po rozmiarach.
 * Otwiera się w natywnym elemencie `<dialog>` z oznaczonym nagłówkiem, przyciskiem zamykania i obsługą klawiatury.
 * Ustaw tekst przycisku i nagłówek okna modalnego na jednym ekranie ustawień.
 * Arkusz stylów korzysta z niestandardowych właściwości CSS (kolor akcentu, promień, kolory okna dialogowego) i zawiera wariant dla trybu ciemnego oraz ograniczonego ruchu.
@@ -30,10 +30,10 @@ Kod źródłowy i zgłoszenia błędów znajdziesz na GitHubie: https://github.c
 
 == Installation ==
 
-1. Wgraj wtyczkę do `/wp-content/plugins/plogins-sizer` lub zainstaluj przez Wtyczki → Dodaj nową.
+1. Wgraj wtyczkę do `/wp-content/plugins/plogins-sizer` lub zainstaluj przez Wtyczki > Dodaj nową.
 2. Włącz ją. WooCommerce musi być aktywne.
-3. Przejdź do WooCommerce → Przewodniki po rozmiarach, aby utworzyć tabelę i ustawić etykietę przycisku.
-4. Przypisz tabelę do produktu (Dane produktu → Przewodnik po rozmiarach).
+3. Przejdź do WooCommerce > Przewodniki po rozmiarach, aby utworzyć tabelę i ustawić etykietę przycisku.
+4. Przypisz tabelę do produktu (Dane produktu > Przewodnik po rozmiarach).
 
 == Frequently Asked Questions ==
 
@@ -63,7 +63,7 @@ Tak. Korzysta z natywnego elementu `<dialog>` z oznaczonym nagłówkiem, przycis
 
 = Can one chart apply to many products? =
 
-Tak. Utwórz tabelę raz w WooCommerce → Przewodniki po rozmiarach, a następnie przypisz ją w zakładce Przewodnik po rozmiarach każdego produktu.
+Tak. Utwórz tabelę raz w WooCommerce > Przewodniki po rozmiarach, a następnie przypisz ją w zakładce Przewodnik po rozmiarach każdego produktu.
 
 
 = Does this plugin work on WordPress Multisite? =

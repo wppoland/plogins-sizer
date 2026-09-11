@@ -169,11 +169,11 @@ msgstr "Tablas de tallas guardadas."
 
 #: src/Admin/SettingsPage.php:281
 msgid ""
-"Build reusable charts here, then assign them to a product (Product data → "
+"Build reusable charts here, then assign them to a product (Product data > "
 "Size guide). Each chart is a simple labelled table."
 msgstr ""
 "Cree gráficos reutilizables aquí y luego asígnelos a un producto (Datos del "
-"producto → Guía de tallas). Cada gráfico es una tabla etiquetada simple."
+"producto > Guía de tallas). Cada gráfico es una tabla etiquetada simple."
 
 #: src/Admin/SettingsPage.php:289
 msgid "No size charts yet. Add your first one below."

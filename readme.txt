@@ -4,7 +4,7 @@ Tags: woocommerce, size guide, size chart, product, fashion
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.12
+Stable tag: 1.0.13
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -22,7 +22,7 @@ Source and bug reports live on GitHub: [github.com/wppoland/plogins-sizer](https
 **What it does**
 
 * Build size charts as labelled tables and reuse the same chart across many products.
-* Pick a chart per product from the Product data → Size guide tab.
+* Pick a chart per product from the Product data > Size guide tab.
 * Opens in a native `<dialog>` element with a labelled heading, a close button, and keyboard support.
 * Set the button text and the modal heading from one settings screen.
 * Stylesheet uses CSS custom properties (accent colour, radius, dialog colours) and includes a dark-scheme and reduced-motion variant.
@@ -30,10 +30,10 @@ Source and bug reports live on GitHub: [github.com/wppoland/plogins-sizer](https
 
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/plogins-sizer`, or install via Plugins → Add New.
+1. Upload the plugin to `/wp-content/plugins/plogins-sizer`, or install via Plugins > Add New.
 2. Activate it. WooCommerce must be active.
-3. Go to WooCommerce → Size Guides to create a chart and set the button label.
-4. Assign a chart on a product (Product data → Size guide).
+3. Go to WooCommerce > Size Guides to create a chart and set the button label.
+4. Assign a chart on a product (Product data > Size guide).
 
 == Frequently Asked Questions ==
 
@@ -63,7 +63,7 @@ Yes. It uses a native `<dialog>` with a labelled heading, close button, keyboard
 
 = Can one chart apply to many products? =
 
-Yes. Build a chart once under WooCommerce → Size Guides, then assign it on each product's Size guide tab.
+Yes. Build a chart once under WooCommerce > Size Guides, then assign it on each product's Size guide tab.
 
 
 = Does this plugin work on WordPress Multisite? =
@@ -84,6 +84,10 @@ Sizer does not connect to any external services. It makes no API calls and loads
 Plogins Sizer is fully translatable and ships the `plogins-sizer.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.13 =
+* Fixed: the PRO upgrade promo kept selling to people who had already bought the paid edition. Only the banner could be dismissed, so the sidebar promo and the locked feature cards followed a paying customer around for good. The promo now checks whether the paid edition is active and steps aside when it is.
+* Fixed: arrow glyphs in the admin menu paths, and in the strings handed to translators. An arrow inside a translatable string makes the glyph every translator's problem and changes the layout in any locale that drops it.
 
 = 1.0.12 =
 * Fixed: deleting the plugin left the per-user "dismiss" flag from the PRO notice in the database. Uninstall now removes it for every user, not just the one who dismissed it.

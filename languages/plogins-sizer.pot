@@ -193,7 +193,7 @@ msgid "Size charts saved."
 msgstr ""
 
 #: src/Admin/SettingsPage.php:301
-msgid "Build reusable charts here, then assign them to a product (Product data → Size guide). Each chart is a simple labelled table."
+msgid "Build reusable charts here, then assign them to a product (Product data > Size guide). Each chart is a simple labelled table."
 msgstr ""
 
 #: src/Admin/SettingsPage.php:309

@@ -299,7 +299,7 @@ final class SettingsPage implements HasHooks
         wp_nonce_field(self::SAVE_ACTION);
 
         echo '<p class="description sizer-charts-intro">' . esc_html__(
-            'Build reusable charts here, then assign them to a product (Product data → Size guide). Each chart is a simple labelled table.',
+            'Build reusable charts here, then assign them to a product (Product data > Size guide). Each chart is a simple labelled table.',
             'plogins-sizer',
         ) . '</p>';
 

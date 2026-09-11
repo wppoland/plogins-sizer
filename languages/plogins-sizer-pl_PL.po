@@ -169,11 +169,11 @@ msgstr "Tabele rozmiarów zostały zapisane."
 
 #: src/Admin/SettingsPage.php:281
 msgid ""
-"Build reusable charts here, then assign them to a product (Product data → "
+"Build reusable charts here, then assign them to a product (Product data > "
 "Size guide). Each chart is a simple labelled table."
 msgstr ""
 "Twórz tutaj tabele do wielokrotnego użytku, a następnie przypisuj je do "
-"produktu (Dane produktu → Przewodnik po rozmiarach). Każda tabela to prosta, "
+"produktu (Dane produktu > Przewodnik po rozmiarach). Każda tabela to prosta, "
 "opisana tabela."
 
 #: src/Admin/SettingsPage.php:289
