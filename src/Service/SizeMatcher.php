@@ -102,7 +102,7 @@ final class SizeMatcher
             return false;
         }
 
-        if (preg_match('/^(\d+(?:\.\d+)?)\s*[-–—]\s*(\d+(?:\.\d+)?)$/', $cell, $matches)) {
+        if (preg_match('/^(\d+(?:\.\d+)?)\s*[--, ]\s*(\d+(?:\.\d+)?)$/', $cell, $matches)) {
             return $value >= (float) $matches[1] && $value <= (float) $matches[2];
         }
 

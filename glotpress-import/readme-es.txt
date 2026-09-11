@@ -22,7 +22,7 @@ El código fuente y los informes de errores están en GitHub: https://github.com
 <strong>Qué hace</strong>
 
 * Crea tablas de tallas como tablas etiquetadas y reutiliza la misma tabla en muchos productos.
-* Elige una tabla por producto en la pestaña Datos del producto → Guía de tallas.
+* Elige una tabla por producto en la pestaña Datos del producto > Guía de tallas.
 * Se abre en un elemento nativo `<dialog>` con un encabezado etiquetado, un botón de cierre y compatibilidad con el teclado.
 * Define el texto del botón y el encabezado de la ventana modal desde una única pantalla de ajustes.
 * La hoja de estilos usa propiedades personalizadas de CSS (color de acento, radio, colores del diálogo) e incluye una variante para esquema oscuro y movimiento reducido.
@@ -30,10 +30,10 @@ El código fuente y los informes de errores están en GitHub: https://github.com
 
 == Installation ==
 
-1. Sube el plugin a `/wp-content/plugins/plogins-sizer` o instálalo desde Plugins → Añadir nuevo.
+1. Sube el plugin a `/wp-content/plugins/plogins-sizer` o instálalo desde Plugins > Añadir nuevo.
 2. Actívalo. WooCommerce debe estar activo.
-3. Ve a WooCommerce → Guías de tallas para crear una tabla y definir la etiqueta del botón.
-4. Asigna una tabla a un producto (Datos del producto → Guía de tallas).
+3. Ve a WooCommerce > Guías de tallas para crear una tabla y definir la etiqueta del botón.
+4. Asigna una tabla a un producto (Datos del producto > Guía de tallas).
 
 == Frequently Asked Questions ==
 
@@ -63,7 +63,7 @@ Sí. Utiliza un `<dialog>` nativo con un encabezado etiquetado, botón de cierre
 
 = Can one chart apply to many products? =
 
-Sí. Crea una tabla una vez en WooCommerce → Guías de tallas y luego asígnala en la pestaña Guía de tallas de cada producto.
+Sí. Crea una tabla una vez en WooCommerce > Guías de tallas y luego asígnala en la pestaña Guía de tallas de cada producto.
 
 
 = Does this plugin work on WordPress Multisite? =

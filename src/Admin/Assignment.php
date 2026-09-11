@@ -11,7 +11,7 @@ use Sizer\Repository\ChartRepository;
 use Sizer\Service\ChartResolver;
 
 /**
- * Admin assignment UI: a per-product select in the Product data → Size guide
+ * Admin assignment UI: a per-product select in the Product data > Size guide
  * panel that picks which reusable chart shows on the product page.
  *
  * @package Sizer\Admin
