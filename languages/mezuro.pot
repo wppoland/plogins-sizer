@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plogins Sizer - Size Guide for WooCommerce 1.0.10\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/plogins-sizer\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mezuro\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -12,34 +12,34 @@ msgstr ""
 "POT-Creation-Date: 2026-09-08T13:42:32+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: plogins-sizer\n"
+"X-Domain: mezuro\n"
 
 #. Plugin Name of the plugin
-#: plogins-sizer.php
+#: mezuro.php
 msgid "Plogins Sizer - Size Guide for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin
-#: plogins-sizer.php
+#: mezuro.php
 msgid "https://plogins.com/plogins-sizer/"
 msgstr ""
 
 #. Description of the plugin
-#: plogins-sizer.php
+#: mezuro.php
 msgid "Add size guides and size charts to your WooCommerce products via an accessible modal."
 msgstr ""
 
 #. Author of the plugin
-#: plogins-sizer.php
+#: mezuro.php
 msgid "WPPoland.com"
 msgstr ""
 
 #. Author URI of the plugin
-#: plogins-sizer.php
+#: mezuro.php
 msgid "https://wppoland.com"
 msgstr ""
 
-#: plogins-sizer.php:55
+#: mezuro.php:55
 msgid "Sizer - Size Guide and Charts for WooCommerce requires WooCommerce to be active."
 msgstr ""
 

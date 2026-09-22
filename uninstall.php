@@ -1,6 +1,6 @@
 <?php
 /**
- * Sizer uninstall routine.
+ * Mezuro uninstall routine.
  *
  * Removes plugin options when the user deletes the plugin. Per-product
  * assignments live in post meta; we leave those alone so a reinstall keeps
