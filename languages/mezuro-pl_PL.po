@@ -20,12 +20,12 @@ msgstr ""
 #. Plugin Name of the plugin
 #: mezuro.php
 msgid "Plogins Sizer - Size Guide for WooCommerce"
-msgstr ""
+msgstr "Plogins Sizer - Tabela rozmiarów dla WooCommerce"
 
 #. Plugin URI of the plugin
 #: mezuro.php
 msgid "https://plogins.com/plogins-sizer/"
-msgstr ""
+msgstr "https://plogins.com/plogins-sizer/"
 
 #. Description of the plugin
 #: mezuro.php
@@ -39,12 +39,12 @@ msgstr ""
 #. Author of the plugin
 #: mezuro.php
 msgid "WPPoland.com"
-msgstr ""
+msgstr "WPPoland.com"
 
 #. Author URI of the plugin
 #: mezuro.php
 msgid "https://wppoland.com"
-msgstr ""
+msgstr "https://wppoland.com"
 
 #: mezuro.php:55
 msgid ""
