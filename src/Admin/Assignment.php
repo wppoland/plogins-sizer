@@ -73,9 +73,7 @@ final class Assignment implements HasHooks
 
     public function saveProductMeta(int $post_id): void
     {
-        // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Verified on next line.
-        $nonce = isset($_POST[self::NONCE]) ? sanitize_text_field(wp_unslash((string) $_POST[self::NONCE])) : '';
-        if ('' === $nonce || ! wp_verify_nonce($nonce, self::NONCE)) {
+        if (! isset($_POST[self::NONCE]) || ! wp_verify_nonce(sanitize_text_field(wp_unslash((string) $_POST[self::NONCE])), self::NONCE)) {
             return;
         }
 
@@ -83,12 +81,11 @@ final class Assignment implements HasHooks
             return;
         }
 
-        // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Nonce verified above.
         $value = isset($_POST[ChartResolver::PRODUCT_META])
             ? sanitize_key((string) wp_unslash($_POST[ChartResolver::PRODUCT_META]))
             : '';
 
-        if ('' === $value) {
+        if ('' === $value || null === $this->charts->find($value)) {
             delete_post_meta($post_id, ChartResolver::PRODUCT_META);
             return;
         }
