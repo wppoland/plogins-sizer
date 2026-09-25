@@ -209,7 +209,6 @@ final class SettingsPage implements HasHooks
         $charts = [];
         // The whole structure is deep-sanitised here (every scalar through
         // sanitize_text_field) and again, field by field, in Repository::normalise().
-        // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Nonce verified above via check_admin_referer().
         $raw = isset($_POST['charts']) && is_array($_POST['charts'])
             ? map_deep(wp_unslash($_POST['charts']), 'sanitize_text_field')
             : [];
@@ -241,7 +240,7 @@ final class SettingsPage implements HasHooks
             return;
         }
 
-        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only tab switch.
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only view parameter, validated against an allowlist.
         $tab = isset($_GET['tab']) ? sanitize_key((string) wp_unslash($_GET['tab'])) : 'settings';
         if (! in_array($tab, ['settings', 'charts'], true)) {
             $tab = 'settings';
@@ -296,8 +295,9 @@ final class SettingsPage implements HasHooks
 
     private function renderChartsTab(): void
     {
-        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only success flag.
-        if (isset($_GET['updated'])) {
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only view parameter, only the value '1' is accepted.
+        $updated = isset($_GET['updated']) ? sanitize_key((string) wp_unslash($_GET['updated'])) : '';
+        if ('1' === $updated) {
             echo '<div class="notice notice-success is-dismissible"><p>' . esc_html__('Size charts saved.', 'mezuro') . '</p></div>';
         }
 
