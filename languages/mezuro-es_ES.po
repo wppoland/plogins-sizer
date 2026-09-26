@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sizer - Size Guide and Charts for WooCommerce 0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/sizer\n"
-"POT-Creation-Date: 2026-06-16T20:23:05+00:00\n"
+"POT-Creation-Date: 2026-09-26T04:48:59+00:00\n"
 "PO-Revision-Date: 2026-06-16T20:23:05+00:00\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -13,21 +13,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Domain: plogins-sizer\n"
+"X-Domain: mezuro\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
 #. Plugin Name of the plugin
-#: sizer.php
-msgid "Sizer - Size Guide and Charts for WooCommerce"
-msgstr "Sizer - Guía de tallas y tablas para WooCommerce"
+#: mezuro.php
+msgid "Mezuro - Size Guide for WooCommerce"
+msgstr "Mezuro - Guía de tallas y tablas para WooCommerce"
 
 #. Plugin URI of the plugin
-#: sizer.php
-msgid "https://plogins.com/sizer/"
-msgstr "https://plogins.com/es/sizer/"
+#: mezuro.php
+msgid "https://plogins.com/plogins-sizer/"
+msgstr ""
 
 #. Description of the plugin
-#: sizer.php
+#: mezuro.php
 msgid ""
 "Add size guides and size charts to your WooCommerce products via an "
 "accessible modal."
@@ -36,30 +36,25 @@ msgstr ""
 "través de una ventana modal accesible."
 
 #. Author of the plugin
-#: sizer.php
-msgid "WPPoland"
-msgstr "WPPoland"
+#: mezuro.php
+msgid "WPPoland.com"
+msgstr ""
 
 #. Author URI of the plugin
-#: sizer.php
-msgid "https://plogins.com/"
-msgstr "https://plogins.com/"
-
-#: sizer.php:55
-msgid ""
-"Sizer - Size Guide and Charts for WooCommerce requires WooCommerce to be "
-"active."
+#: mezuro.php
+msgid "https://wppoland.com"
 msgstr ""
-"Sizer: guía de tallas y gráficos para WooCommerce requiere que WooCommerce "
-"esté activo."
 
-#: src/Admin/Assignment.php:42 src/Admin/SettingsPage.php:122
-#: src/Admin/SettingsPage.php:137 src/Service/Settings.php:46
+#: mezuro.php:55
+msgid "Mezuro requires WooCommerce to be active."
+msgstr ""
+
+#: src/Admin/Assignment.php:42 src/Service/Texts.php:37
 msgid "Size guide"
 msgstr "Guía de tallas"
 
-#: src/Admin/Assignment.php:65 src/Admin/SettingsPage.php:330
-#: templates/single-product/chart-table.php:31
+#: src/Admin/Assignment.php:65 src/Admin/SettingsPage.php:359
+#: templates/single-product/chart-table.php:70
 msgid "Size chart"
 msgstr "Tabla de tallas"
 
@@ -75,39 +70,93 @@ msgstr ""
 "Elija una tabla para mostrar en este producto o déjela en blanco para "
 "ocultar la guía de tallas aquí."
 
-#: src/Admin/SettingsPage.php:46
-msgid "Sizer: Size Guides"
-msgstr "Sizer: Guías de tallas"
+#: src/Admin/ProUpsell.php:85
+msgid "Wkrótce"
+msgstr "Próximamente"
 
-#: src/Admin/SettingsPage.php:47
+#: src/Admin/ProUpsell.php:85
+msgid "Coming soon"
+msgstr "Próximamente"
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:91
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr "desde %1$s%2$d/año"
+
+#: src/Admin/ProUpsell.php:100
+msgid "Upgrade to PRO"
+msgstr "Mejora a PRO"
+
+#: src/Admin/ProUpsell.php:101
+msgid "Powiadom mnie"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:101
+msgid "Get notified"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:131
+msgid "Permission denied."
+msgstr "Permiso denegado."
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:161
+#, php-format
+msgid "Do more with %s"
+msgstr "Haz más con %s"
+
+#: src/Admin/ProUpsell.php:168
+msgid "Dismiss this notice"
+msgstr "Descartar este aviso"
+
+#: src/Admin/ProUpsell.php:190
+msgid "Unlock every PRO feature"
+msgstr "Desbloquea todas las funciones PRO"
+
+#: src/Admin/ProUpsell.php:203
+msgid "one licence, every PRO feature"
+msgstr "una licencia, todas las funciones PRO"
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:222
+#, php-format
+msgid "What %s adds"
+msgstr "Lo que añade %s"
+
+#: src/Admin/SettingsPage.php:55
+msgid "Mezuro: size guides"
+msgstr "Mezuro: Guías de tallas"
+
+#: src/Admin/SettingsPage.php:56
 msgid "Size Guides"
 msgstr "Guías de tallas"
 
-#: src/Admin/SettingsPage.php:77
+#: src/Admin/SettingsPage.php:86
 msgid "Delete this size chart? This cannot be undone."
 msgstr "¿Eliminar esta tabla de tallas? Esto no se puede deshacer."
 
-#: src/Admin/SettingsPage.php:78 src/Admin/SettingsPage.php:366
+#: src/Admin/SettingsPage.php:87 src/Admin/SettingsPage.php:395
 msgid "Column heading"
 msgstr "Encabezado de columna"
 
-#: src/Admin/SettingsPage.php:79 src/Admin/SettingsPage.php:368
+#: src/Admin/SettingsPage.php:88 src/Admin/SettingsPage.php:397
 msgid "Remove column"
 msgstr "Quitar columna"
 
-#: src/Admin/SettingsPage.php:80 src/Admin/SettingsPage.php:388
+#: src/Admin/SettingsPage.php:89 src/Admin/SettingsPage.php:417
 msgid "Remove row"
 msgstr "Quitar fila"
 
-#: src/Admin/SettingsPage.php:81 src/Admin/SettingsPage.php:385
+#: src/Admin/SettingsPage.php:90 src/Admin/SettingsPage.php:414
 msgid "Cell value"
 msgstr "Valor de celda"
 
-#: src/Admin/SettingsPage.php:102
+#: src/Admin/SettingsPage.php:120
 msgid "How the size guide appears"
 msgstr "Cómo aparece la guía de tallas"
 
-#: src/Admin/SettingsPage.php:104
+#: src/Admin/SettingsPage.php:122
 msgid ""
 "On any product with a chart assigned, shoppers see a “Size guide” link just "
 "below the add-to-cart button. Selecting it opens an accessible pop-up that "
@@ -120,15 +169,15 @@ msgstr ""
 "gráfico. Estas dos configuraciones controlan el texto que ven los "
 "compradores, déjelos como están y la guía funcionará de inmediato."
 
-#: src/Admin/SettingsPage.php:112
+#: src/Admin/SettingsPage.php:130
 msgid "Link wording"
 msgstr "Redacción del enlace"
 
-#: src/Admin/SettingsPage.php:113
+#: src/Admin/SettingsPage.php:131
 msgid "Pop-up heading"
 msgstr "Encabezado emergente"
 
-#: src/Admin/SettingsPage.php:124
+#: src/Admin/SettingsPage.php:145
 msgid ""
 "The clickable text shown on the product page that opens the chart. Keep it "
 "short, “Size guide”, “Size chart” or “Find my fit” all read well next to the "
@@ -138,7 +187,7 @@ msgstr ""
 "producto que abre el gráfico. Sea breve: \"Guía de tallas\", \"Tabla de "
 "tallas\" o \"Encuentra mi ajuste\", todos se leen bien junto al precio."
 
-#: src/Admin/SettingsPage.php:139
+#: src/Admin/SettingsPage.php:160
 msgid ""
 "The title shown at the top of the pop-up once it opens. Leave it blank to "
 "reuse the link wording above."
@@ -147,79 +196,79 @@ msgstr ""
 "vez que se abre. Déjelo en blanco para reutilizar el texto del enlace "
 "anterior."
 
-#: src/Admin/SettingsPage.php:152
+#: src/Admin/SettingsPage.php:173
 msgid "Preview"
 msgstr "Avance"
 
-#: src/Admin/SettingsPage.php:183
+#: src/Admin/SettingsPage.php:204
 msgid "You are not allowed to manage size charts."
 msgstr "No está permitido gestionar tablas de tallas."
 
-#: src/Admin/SettingsPage.php:238
+#: src/Admin/SettingsPage.php:260
 msgid "Settings"
 msgstr "Ajustes"
 
-#: src/Admin/SettingsPage.php:244
+#: src/Admin/SettingsPage.php:266
 msgid "Size charts"
 msgstr "Tablas de tallas"
 
-#: src/Admin/SettingsPage.php:272
+#: src/Admin/SettingsPage.php:301
 msgid "Size charts saved."
 msgstr "Tablas de tallas guardadas."
 
-#: src/Admin/SettingsPage.php:281
+#: src/Admin/SettingsPage.php:310
 msgid ""
-"Build reusable charts here, then assign them to a product (Product data → "
+"Build reusable charts here, then assign them to a product (Product data > "
 "Size guide). Each chart is a simple labelled table."
 msgstr ""
 "Cree gráficos reutilizables aquí y luego asígnelos a un producto (Datos del "
-"producto → Guía de tallas). Cada gráfico es una tabla etiquetada simple."
+"producto > Guía de tallas). Cada gráfico es una tabla etiquetada simple."
 
-#: src/Admin/SettingsPage.php:289
+#: src/Admin/SettingsPage.php:318
 msgid "No size charts yet. Add your first one below."
 msgstr "Aún no hay tablas de tallas. Añade el primero a continuación."
 
-#: src/Admin/SettingsPage.php:302
+#: src/Admin/SettingsPage.php:331
 msgid "+ Add size chart"
 msgstr "+ Añadir tabla de tallas"
 
-#: src/Admin/SettingsPage.php:310
+#: src/Admin/SettingsPage.php:339
 msgid "Save charts"
 msgstr "Guardar gráficos"
 
-#: src/Admin/SettingsPage.php:340
+#: src/Admin/SettingsPage.php:369
 msgid "Chart name"
 msgstr "Nombre del gráfico"
 
-#: src/Admin/SettingsPage.php:343
+#: src/Admin/SettingsPage.php:372
 msgid "e.g. Men's T-Shirts"
 msgstr "p.ej. Camisetas de hombre"
 
-#: src/Admin/SettingsPage.php:347
+#: src/Admin/SettingsPage.php:376
 msgid "Caption (optional)"
 msgstr "Título (opcional)"
 
-#: src/Admin/SettingsPage.php:350
+#: src/Admin/SettingsPage.php:379
 msgid "e.g. All measurements in cm"
 msgstr "p.ej. Todas las medidas en cm."
 
-#: src/Admin/SettingsPage.php:352
+#: src/Admin/SettingsPage.php:381
 msgid "Delete chart"
 msgstr "Eliminar gráfico"
 
-#: src/Admin/SettingsPage.php:352
+#: src/Admin/SettingsPage.php:381
 msgid "Delete"
 msgstr "Eliminar"
 
-#: src/Admin/SettingsPage.php:367
+#: src/Admin/SettingsPage.php:396
 msgid "Size"
 msgstr "Tamaño"
 
-#: src/Admin/SettingsPage.php:371
+#: src/Admin/SettingsPage.php:400
 msgid "Add column"
 msgstr "Añadir columna"
 
-#: src/Admin/SettingsPage.php:395
+#: src/Admin/SettingsPage.php:424
 msgid "+ Add row"
 msgstr "+ Añadir fila"
 
@@ -231,62 +280,15 @@ msgstr "Aún no hay información sobre el tamaño disponible."
 msgid "Close size guide"
 msgstr "Cerrar guía de tallas"
 
-#: src/Admin/ProUpsell.php:78
-msgid "Wkrótce"
-msgstr "Próximamente"
+#~ msgid "https://plogins.com/sizer/"
+#~ msgstr "https://plogins.com/es/sizer/"
 
-#: src/Admin/ProUpsell.php:78
-msgid "Coming soon"
-msgstr "Próximamente"
+#~ msgid "WPPoland"
+#~ msgstr "WPPoland"
 
-#. translators: %d: yearly price in PLN
-#: src/Admin/ProUpsell.php:83
+#~ msgid "https://plogins.com/"
+#~ msgstr "https://plogins.com/"
+
 #, php-format
-msgid "od %d zł/rok"
-msgstr "desde %d zł/año"
-
-#. translators: 1: currency symbol, 2: yearly price
-#: src/Admin/ProUpsell.php:88
-#, php-format
-msgid "from %1$s%2$d/yr"
-msgstr "desde %1$s%2$d/año"
-
-#: src/Admin/ProUpsell.php:97
-msgid "Upgrade to PRO"
-msgstr "Mejora a PRO"
-
-#: src/Admin/ProUpsell.php:98
-msgid "Powiadom mnie"
-msgstr "Avísame"
-
-#: src/Admin/ProUpsell.php:98
-msgid "Get notified"
-msgstr "Avísame"
-
-#: src/Admin/ProUpsell.php:128
-msgid "Permission denied."
-msgstr "Permiso denegado."
-
-#. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:158
-#, php-format
-msgid "Do more with %s"
-msgstr "Haz más con %s"
-
-#: src/Admin/ProUpsell.php:165
-msgid "Dismiss this notice"
-msgstr "Descartar este aviso"
-
-#: src/Admin/ProUpsell.php:182
-msgid "Unlock every PRO feature"
-msgstr "Desbloquea todas las funciones PRO"
-
-#: src/Admin/ProUpsell.php:195
-msgid "one licence, every PRO feature"
-msgstr "una licencia, todas las funciones PRO"
-
-#. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:214
-#, php-format
-msgid "What %s adds"
-msgstr "Lo que añade %s"
+#~ msgid "od %d zł/rok"
+#~ msgstr "desde %d zł/año"

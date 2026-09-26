@@ -18,7 +18,10 @@ final class Settings
     private ?array $cache = null;
 
     /**
-     * All settings, merged over defaults.
+     * All settings, merged over defaults, with every customer-facing text
+     * resolved to its translated default where the merchant left the field
+     * blank. This is the rendering view; it must never be written back to the
+     * option, or one language would be frozen into the database.
      *
      * @return array<string, mixed>
      */
@@ -28,6 +31,18 @@ final class Settings
             return $this->cache;
         }
 
+        return $this->cache = Texts::apply($this->raw());
+    }
+
+    /**
+     * Settings exactly as stored, merged over defaults, with no text resolution.
+     * The settings screen edits these, so saving the form stores what the
+     * merchant typed and nothing else.
+     *
+     * @return array<string, mixed>
+     */
+    public function raw(): array
+    {
         /** @var array<string, mixed> $defaults */
         $defaults = require \Sizer\PLUGIN_DIR . '/config/defaults.php';
 
@@ -36,20 +51,16 @@ final class Settings
             $stored = [];
         }
 
-        return $this->cache = array_merge($defaults, $stored);
+        return array_merge($defaults, $stored);
     }
 
     public function triggerLabel(): string
     {
-        $label = trim((string) ($this->all()['trigger_label'] ?? ''));
-
-        return '' !== $label ? $label : __('Size guide', 'plogins-sizer');
+        return trim((string) ($this->all()['trigger_label'] ?? ''));
     }
 
     public function modalTitle(): string
     {
-        $title = trim((string) ($this->all()['modal_title'] ?? ''));
-
-        return '' !== $title ? $title : $this->triggerLabel();
+        return trim((string) ($this->all()['modal_title'] ?? ''));
     }
 }

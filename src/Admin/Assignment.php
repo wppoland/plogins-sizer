@@ -11,7 +11,7 @@ use Sizer\Repository\ChartRepository;
 use Sizer\Service\ChartResolver;
 
 /**
- * Admin assignment UI: a per-product select in the Product data → Size guide
+ * Admin assignment UI: a per-product select in the Product data > Size guide
  * panel that picks which reusable chart shows on the product page.
  *
  * @package Sizer\Admin
@@ -39,7 +39,7 @@ final class Assignment implements HasHooks
     public function addProductTab(array $tabs): array
     {
         $tabs['sizer'] = [
-            'label'    => __('Size guide', 'plogins-sizer'),
+            'label'    => __('Size guide', 'mezuro'),
             'target'   => 'sizer_product_data',
             'class'    => [],
             'priority' => 65,
@@ -62,10 +62,10 @@ final class Assignment implements HasHooks
         echo '<div class="options_group">';
         $this->selectField(
             ChartResolver::PRODUCT_META,
-            __('Size chart', 'plogins-sizer'),
+            __('Size chart', 'mezuro'),
             $current,
-            __('- No chart -', 'plogins-sizer'),
-            __('Choose a chart to show on this product, or leave it blank to hide the size guide here.', 'plogins-sizer'),
+            __('- No chart -', 'mezuro'),
+            __('Choose a chart to show on this product, or leave it blank to hide the size guide here.', 'mezuro'),
         );
         echo '</div>';
         echo '</div>';
@@ -73,9 +73,7 @@ final class Assignment implements HasHooks
 
     public function saveProductMeta(int $post_id): void
     {
-        // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Verified on next line.
-        $nonce = isset($_POST[self::NONCE]) ? sanitize_text_field(wp_unslash((string) $_POST[self::NONCE])) : '';
-        if ('' === $nonce || ! wp_verify_nonce($nonce, self::NONCE)) {
+        if (! isset($_POST[self::NONCE]) || ! wp_verify_nonce(sanitize_text_field(wp_unslash((string) $_POST[self::NONCE])), self::NONCE)) {
             return;
         }
 
@@ -83,12 +81,11 @@ final class Assignment implements HasHooks
             return;
         }
 
-        // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Nonce verified above.
         $value = isset($_POST[ChartResolver::PRODUCT_META])
             ? sanitize_key((string) wp_unslash($_POST[ChartResolver::PRODUCT_META]))
             : '';
 
-        if ('' === $value) {
+        if ('' === $value || null === $this->charts->find($value)) {
             delete_post_meta($post_id, ChartResolver::PRODUCT_META);
             return;
         }

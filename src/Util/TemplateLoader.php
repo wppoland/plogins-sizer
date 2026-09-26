@@ -11,7 +11,7 @@ use const Sizer\PLUGIN_DIR;
 /**
  * Loads PHP templates with optional theme overrides.
  *
- * Lookup order: {theme}/sizer/{template}.php → {plugin}/templates/{template}.php
+ * Lookup order: {theme}/sizer/{template}.php > {plugin}/templates/{template}.php
  */
 final class TemplateLoader
 {

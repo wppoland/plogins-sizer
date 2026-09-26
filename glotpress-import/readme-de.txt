@@ -22,7 +22,7 @@ Quellcode und Fehlerberichte findest du auf GitHub: https://github.com/wppoland/
 <strong>Was es kann</strong>
 
 * Baue Größentabellen als beschriftete Tabellen und verwende dieselbe Tabelle für viele Produkte wieder.
-* Wähle pro Produkt eine Tabelle auf dem Tab Produktdaten → Größentabelle.
+* Wähle pro Produkt eine Tabelle auf dem Tab Produktdaten > Größentabelle.
 * Öffnet in einem nativen `<dialog>`-Element mit beschrifteter Überschrift, einem Schließen-Button und Tastaturunterstützung.
 * Lege den Button-Text und die Modal-Überschrift auf einem einzigen Einstellungsbildschirm fest.
 * Das Stylesheet nutzt CSS-Custom-Properties (Akzentfarbe, Radius, Dialogfarben) und enthält eine Variante für dunkles Schema und reduzierte Bewegung.
@@ -30,10 +30,10 @@ Quellcode und Fehlerberichte findest du auf GitHub: https://github.com/wppoland/
 
 == Installation ==
 
-1. Lade das Plugin nach `/wp-content/plugins/plogins-sizer` hoch oder installiere es über Plugins → Installieren.
+1. Lade das Plugin nach `/wp-content/plugins/plogins-sizer` hoch oder installiere es über Plugins > Installieren.
 2. Aktiviere es. WooCommerce muss aktiv sein.
-3. Gehe zu WooCommerce → Größentabellen, um eine Tabelle zu erstellen und die Button-Beschriftung festzulegen.
-4. Weise einem Produkt eine Tabelle zu (Produktdaten → Größentabelle).
+3. Gehe zu WooCommerce > Größentabellen, um eine Tabelle zu erstellen und die Button-Beschriftung festzulegen.
+4. Weise einem Produkt eine Tabelle zu (Produktdaten > Größentabelle).
 
 == Frequently Asked Questions ==
 
@@ -63,7 +63,7 @@ Ja. Es verwendet ein natives `<dialog>` mit beschrifteter Überschrift, Schließ
 
 = Can one chart apply to many products? =
 
-Ja. Erstelle eine Tabelle einmal unter WooCommerce → Größentabellen und weise sie dann auf dem Größentabelle-Tab jedes Produkts zu.
+Ja. Erstelle eine Tabelle einmal unter WooCommerce > Größentabellen und weise sie dann auf dem Größentabelle-Tab jedes Produkts zu.
 
 
 = Does this plugin work on WordPress Multisite? =

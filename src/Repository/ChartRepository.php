@@ -40,7 +40,8 @@ final class ChartRepository
             if (! is_array($chart) || ! isset($chart['id'])) {
                 continue;
             }
-            $normalised             = $this->normalise($chart);
+            $normalised       = $this->normalise($chart);
+            $normalised['id'] = $this->uniqueId($normalised['id'], $charts);
             $charts[$normalised['id']] = $normalised;
         }
 
@@ -66,7 +67,18 @@ final class ChartRepository
      */
     public function save(array $charts): void
     {
+        // Two charts whose names slug down to the same key, a men's and a women's
+        // "T-shirts", or "Summer tops" next to "Summer Tops", used to end up with
+        // the same id. Both rows were stored, but every read keys by id, so the
+        // later chart swallowed the earlier one: the merchant saved two charts and
+        // found one on reload, and shoppers on the product still holding that id
+        // were shown the other chart's measurements. Ids already in the option are
+        // what products point at, so those keep their key and only the newcomer
+        // moves to the next free one.
+        $reserved = array_fill_keys(array_keys($this->all()), true);
+
         $clean = [];
+        $used  = [];
         foreach ($charts as $chart) {
             if (! is_array($chart)) {
                 continue;
@@ -75,10 +87,33 @@ final class ChartRepository
             if ('' === $normalised['id'] || '' === $normalised['name']) {
                 continue;
             }
-            $clean[] = $normalised;
+            $taken            = isset($reserved[$normalised['id']]) ? $used : $used + $reserved;
+            $normalised['id'] = $this->uniqueId($normalised['id'], $taken);
+
+            $used[$normalised['id']] = true;
+            $clean[]                 = $normalised;
         }
 
         update_option(self::OPTION, $clean, false);
+    }
+
+    /**
+     * Return $id, or the first free "$id-2", "$id-3" variant when it is already taken.
+     *
+     * @param array<string, mixed> $taken Map of ids already in use.
+     */
+    private function uniqueId(string $id, array $taken): string
+    {
+        if (! isset($taken[$id])) {
+            return $id;
+        }
+
+        $suffix = 2;
+        while (isset($taken[$id . '-' . $suffix])) {
+            $suffix++;
+        }
+
+        return $id . '-' . $suffix;
     }
 
     /**
