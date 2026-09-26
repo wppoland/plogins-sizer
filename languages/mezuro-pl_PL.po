@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sizer - Size Guide and Charts for WooCommerce 0.1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mezuro\n"
-"POT-Creation-Date: 2026-09-08T13:42:32+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/sizer\n"
+"POT-Creation-Date: 2026-09-26T04:48:59+00:00\n"
 "PO-Revision-Date: 2026-06-15 12:00+0000\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -19,8 +19,8 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: mezuro.php
-msgid "Plogins Sizer - Size Guide for WooCommerce"
-msgstr "Plogins Sizer - Tabela rozmiarów dla WooCommerce"
+msgid "Mezuro - Size Guide for WooCommerce"
+msgstr "Mezuro - Tabela rozmiarów dla WooCommerce"
 
 #. Plugin URI of the plugin
 #: mezuro.php
@@ -47,18 +47,14 @@ msgid "https://wppoland.com"
 msgstr "https://wppoland.com"
 
 #: mezuro.php:55
-msgid ""
-"Sizer - Size Guide and Charts for WooCommerce requires WooCommerce to be "
-"active."
-msgstr ""
-"Sizer - Przewodnik po rozmiarach i tabele dla WooCommerce wymaga aktywnej "
-"wtyczki WooCommerce."
+msgid "Mezuro requires WooCommerce to be active."
+msgstr "Mezuro wymaga aktywnego WooCommerce."
 
 #: src/Admin/Assignment.php:42 src/Service/Texts.php:37
 msgid "Size guide"
 msgstr "Przewodnik po rozmiarach"
 
-#: src/Admin/Assignment.php:65 src/Admin/SettingsPage.php:350
+#: src/Admin/Assignment.php:65 src/Admin/SettingsPage.php:359
 #: templates/single-product/chart-table.php:70
 msgid "Size chart"
 msgstr "Tabela rozmiarów"
@@ -75,63 +71,63 @@ msgstr ""
 "Wybierz tabelę do wyświetlenia przy tym produkcie lub pozostaw puste, aby "
 "ukryć tutaj przewodnik po rozmiarach."
 
-#: src/Admin/ProUpsell.php:78
+#: src/Admin/ProUpsell.php:85
 msgid "Wkrótce"
 msgstr "Wkrótce"
 
-#: src/Admin/ProUpsell.php:78
+#: src/Admin/ProUpsell.php:85
 msgid "Coming soon"
 msgstr "Wkrótce"
 
 #. translators: 1: currency symbol, 2: yearly price
-#: src/Admin/ProUpsell.php:84
+#: src/Admin/ProUpsell.php:91
 #, php-format
 msgid "from %1$s%2$d/yr"
 msgstr "od %1$s%2$d/rok"
 
-#: src/Admin/ProUpsell.php:93
+#: src/Admin/ProUpsell.php:100
 msgid "Upgrade to PRO"
 msgstr "Przejdź na PRO"
 
-#: src/Admin/ProUpsell.php:94
+#: src/Admin/ProUpsell.php:101
 msgid "Powiadom mnie"
 msgstr "Powiadom mnie"
 
-#: src/Admin/ProUpsell.php:94
+#: src/Admin/ProUpsell.php:101
 msgid "Get notified"
 msgstr "Powiadom mnie"
 
-#: src/Admin/ProUpsell.php:124
+#: src/Admin/ProUpsell.php:131
 msgid "Permission denied."
 msgstr "Brak uprawnień."
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:154
+#: src/Admin/ProUpsell.php:161
 #, php-format
 msgid "Do more with %s"
 msgstr "Zrób więcej dzięki %s"
 
-#: src/Admin/ProUpsell.php:161
+#: src/Admin/ProUpsell.php:168
 msgid "Dismiss this notice"
 msgstr "Odrzuć to powiadomienie"
 
-#: src/Admin/ProUpsell.php:178
+#: src/Admin/ProUpsell.php:190
 msgid "Unlock every PRO feature"
 msgstr "Odblokuj wszystkie funkcje PRO"
 
-#: src/Admin/ProUpsell.php:191
+#: src/Admin/ProUpsell.php:203
 msgid "one licence, every PRO feature"
 msgstr "jedna licencja, wszystkie funkcje PRO"
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:210
+#: src/Admin/ProUpsell.php:222
 #, php-format
 msgid "What %s adds"
 msgstr "Co dodaje %s"
 
 #: src/Admin/SettingsPage.php:55
-msgid "Sizer: Size Guides"
-msgstr "Sizer: Przewodniki po rozmiarach"
+msgid "Mezuro: size guides"
+msgstr "Mezuro: Przewodniki po rozmiarach"
 
 #: src/Admin/SettingsPage.php:56
 msgid "Size Guides"
@@ -141,27 +137,27 @@ msgstr "Przewodniki po rozmiarach"
 msgid "Delete this size chart? This cannot be undone."
 msgstr "Usunąć tę tabelę rozmiarów? Tej operacji nie można cofnąć."
 
-#: src/Admin/SettingsPage.php:87 src/Admin/SettingsPage.php:386
+#: src/Admin/SettingsPage.php:87 src/Admin/SettingsPage.php:395
 msgid "Column heading"
 msgstr "Nagłówek kolumny"
 
-#: src/Admin/SettingsPage.php:88 src/Admin/SettingsPage.php:388
+#: src/Admin/SettingsPage.php:88 src/Admin/SettingsPage.php:397
 msgid "Remove column"
 msgstr "Usuń kolumnę"
 
-#: src/Admin/SettingsPage.php:89 src/Admin/SettingsPage.php:408
+#: src/Admin/SettingsPage.php:89 src/Admin/SettingsPage.php:417
 msgid "Remove row"
 msgstr "Usuń wiersz"
 
-#: src/Admin/SettingsPage.php:90 src/Admin/SettingsPage.php:405
+#: src/Admin/SettingsPage.php:90 src/Admin/SettingsPage.php:414
 msgid "Cell value"
 msgstr "Wartość komórki"
 
-#: src/Admin/SettingsPage.php:111
+#: src/Admin/SettingsPage.php:120
 msgid "How the size guide appears"
 msgstr "Sposób wyświetlania przewodnika po rozmiarach"
 
-#: src/Admin/SettingsPage.php:113
+#: src/Admin/SettingsPage.php:122
 msgid ""
 "On any product with a chart assigned, shoppers see a “Size guide” link just "
 "below the add-to-cart button. Selecting it opens an accessible pop-up that "
@@ -174,15 +170,15 @@ msgstr ""
 "wykres. Te dwa ustawienia kontrolują treść, którą widzą kupujący. Zostaw je "
 "bez zmian, a przewodnik będzie działać od razu po wyjęciu z pudełka."
 
-#: src/Admin/SettingsPage.php:121
+#: src/Admin/SettingsPage.php:130
 msgid "Link wording"
 msgstr "Treść linku"
 
-#: src/Admin/SettingsPage.php:122
+#: src/Admin/SettingsPage.php:131
 msgid "Pop-up heading"
 msgstr "Wyskakujący nagłówek"
 
-#: src/Admin/SettingsPage.php:136
+#: src/Admin/SettingsPage.php:145
 msgid ""
 "The clickable text shown on the product page that opens the chart. Keep it "
 "short, “Size guide”, “Size chart” or “Find my fit” all read well next to the "
@@ -192,7 +188,7 @@ msgstr ""
 "rozmiarów. Zachowaj krótką formę, „Przewodnik po rozmiarach”, „Tabela "
 "rozmiarów” lub „Znajdź moje dopasowanie” dobrze czytają się obok ceny."
 
-#: src/Admin/SettingsPage.php:151
+#: src/Admin/SettingsPage.php:160
 msgid ""
 "The title shown at the top of the pop-up once it opens. Leave it blank to "
 "reuse the link wording above."
@@ -200,27 +196,27 @@ msgstr ""
 "Tytuł wyświetlany u góry wyskakującego okienka po jego otwarciu. Pozostaw to "
 "pole puste, aby ponownie użyć powyższego linku."
 
-#: src/Admin/SettingsPage.php:164
+#: src/Admin/SettingsPage.php:173
 msgid "Preview"
 msgstr "Podgląd"
 
-#: src/Admin/SettingsPage.php:195
+#: src/Admin/SettingsPage.php:204
 msgid "You are not allowed to manage size charts."
 msgstr "Nie masz uprawnień do zarządzania tabelami rozmiarów."
 
-#: src/Admin/SettingsPage.php:252
+#: src/Admin/SettingsPage.php:260
 msgid "Settings"
 msgstr "Ustawienia"
 
-#: src/Admin/SettingsPage.php:258
+#: src/Admin/SettingsPage.php:266
 msgid "Size charts"
 msgstr "Tabele rozmiarów"
 
-#: src/Admin/SettingsPage.php:292
+#: src/Admin/SettingsPage.php:301
 msgid "Size charts saved."
 msgstr "Tabele rozmiarów zostały zapisane."
 
-#: src/Admin/SettingsPage.php:301
+#: src/Admin/SettingsPage.php:310
 msgid ""
 "Build reusable charts here, then assign them to a product (Product data > "
 "Size guide). Each chart is a simple labelled table."
@@ -229,51 +225,51 @@ msgstr ""
 "produktu (Dane produktu > Przewodnik po rozmiarach). Każda tabela to prosta, "
 "opisana tabela."
 
-#: src/Admin/SettingsPage.php:309
+#: src/Admin/SettingsPage.php:318
 msgid "No size charts yet. Add your first one below."
 msgstr "Nie ma jeszcze żadnych tabel rozmiarów. Dodaj pierwszą poniżej."
 
-#: src/Admin/SettingsPage.php:322
+#: src/Admin/SettingsPage.php:331
 msgid "+ Add size chart"
 msgstr "+ Dodaj tabelę rozmiarów"
 
-#: src/Admin/SettingsPage.php:330
+#: src/Admin/SettingsPage.php:339
 msgid "Save charts"
 msgstr "Zapisz tabele"
 
-#: src/Admin/SettingsPage.php:360
+#: src/Admin/SettingsPage.php:369
 msgid "Chart name"
 msgstr "Nazwa tabeli"
 
-#: src/Admin/SettingsPage.php:363
+#: src/Admin/SettingsPage.php:372
 msgid "e.g. Men's T-Shirts"
 msgstr "np. T-shirty męskie"
 
-#: src/Admin/SettingsPage.php:367
+#: src/Admin/SettingsPage.php:376
 msgid "Caption (optional)"
 msgstr "Podpis (opcjonalnie)"
 
-#: src/Admin/SettingsPage.php:370
+#: src/Admin/SettingsPage.php:379
 msgid "e.g. All measurements in cm"
 msgstr "np. Wszystkie wymiary w cm"
 
-#: src/Admin/SettingsPage.php:372
+#: src/Admin/SettingsPage.php:381
 msgid "Delete chart"
 msgstr "Usuń tabelę"
 
-#: src/Admin/SettingsPage.php:372
+#: src/Admin/SettingsPage.php:381
 msgid "Delete"
 msgstr "Usuń"
 
-#: src/Admin/SettingsPage.php:387
+#: src/Admin/SettingsPage.php:396
 msgid "Size"
 msgstr "Rozmiar"
 
-#: src/Admin/SettingsPage.php:391
+#: src/Admin/SettingsPage.php:400
 msgid "Add column"
 msgstr "Dodaj kolumnę"
 
-#: src/Admin/SettingsPage.php:415
+#: src/Admin/SettingsPage.php:424
 msgid "+ Add row"
 msgstr "+ Dodaj wiersz"
 
