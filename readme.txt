@@ -4,7 +4,7 @@ Tags: woocommerce, size guide, size chart, product, fashion
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -84,6 +84,9 @@ Mezuro does not connect to any external services. It makes no API calls and load
 Mezuro is fully translatable and ships the `mezuro.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.3 =
+* The upgrade notice's "Coming soon" and "Get notified" labels are English source strings for every language; Polish sites used to get their own Polish source text, which translators in other languages then saw untranslated.
 
 = 1.1.2 =
 * The size chart picked on a product is checked against the saved charts before it is stored.
