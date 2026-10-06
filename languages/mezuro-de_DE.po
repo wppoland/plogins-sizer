@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sizer - Size Guide and Charts for WooCommerce 0.1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/sizer\n"
-"POT-Creation-Date: 2026-09-26T04:48:59+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mezuro\n"
+"POT-Creation-Date: 2026-10-05T11:15:20+00:00\n"
 "PO-Revision-Date: 2026-06-16T20:23:05+00:00\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
@@ -24,7 +24,7 @@ msgstr "Mezuro - Größenleitfaden und Diagramme für WooCommerce"
 #. Plugin URI of the plugin
 #: mezuro.php
 msgid "https://plogins.com/plogins-sizer/"
-msgstr ""
+msgstr "https://plogins.com/plogins-sizer/"
 
 #. Description of the plugin
 #: mezuro.php
@@ -38,16 +38,16 @@ msgstr ""
 #. Author of the plugin
 #: mezuro.php
 msgid "WPPoland.com"
-msgstr ""
+msgstr "WPPoland.com"
 
 #. Author URI of the plugin
 #: mezuro.php
 msgid "https://wppoland.com"
-msgstr ""
+msgstr "https://wppoland.com"
 
 #: mezuro.php:55
 msgid "Mezuro requires WooCommerce to be active."
-msgstr ""
+msgstr "Mezuro erfordert, dass WooCommerce aktiv ist."
 
 #: src/Admin/Assignment.php:42 src/Service/Texts.php:37
 msgid "Size guide"
@@ -71,10 +71,6 @@ msgstr ""
 "lass das Feld leer, um die Größentabelle hier auszublenden."
 
 #: src/Admin/ProUpsell.php:85
-msgid "Wkrótce"
-msgstr "Demnächst"
-
-#: src/Admin/ProUpsell.php:85
 msgid "Coming soon"
 msgstr "Demnächst"
 
@@ -87,10 +83,6 @@ msgstr "ab %1$s%2$d/Jahr"
 #: src/Admin/ProUpsell.php:100
 msgid "Upgrade to PRO"
 msgstr "Auf PRO upgraden"
-
-#: src/Admin/ProUpsell.php:101
-msgid "Powiadom mnie"
-msgstr "Benachrichtige mich"
 
 #: src/Admin/ProUpsell.php:101
 msgid "Get notified"
@@ -165,8 +157,8 @@ msgid ""
 "them as they are and the guide works out of the box."
 msgstr ""
 "Bei jedem Produkt, dem eine Tabelle zugewiesen ist, sehen Käufer direkt "
-"unter der Schaltfläche „In den Warenkorb“ den Link „Größenratgeber“. Wenn du "
-"ihn auswählst, wird ein zugängliches Popup geöffnet, in dem die "
+"unter der Schaltfläche „In den Warenkorb“ den Link „Größenratgeber“. Wenn du"
+" ihn auswählst, wird ein zugängliches Popup geöffnet, in dem die "
 "Größentabelle angezeigt wird. Diese beiden Einstellungen steuern den "
 "Wortlaut, den Käufer sehen. Lass sie unverändert und der Ratgeber "
 "funktioniert sofort."
@@ -182,8 +174,8 @@ msgstr "Popup-Überschrift"
 #: src/Admin/SettingsPage.php:145
 msgid ""
 "The clickable text shown on the product page that opens the chart. Keep it "
-"short, “Size guide”, “Size chart” or “Find my fit” all read well next to the "
-"price."
+"short, “Size guide”, “Size chart” or “Find my fit” all read well next to the"
+" price."
 msgstr ""
 "Der anklickbare Text, der auf der Produktseite angezeigt wird und das "
 "Diagramm öffnet. Halte es kurz: „Größenratgeber“, „Größentabelle“ oder "
@@ -222,8 +214,8 @@ msgid ""
 "Build reusable charts here, then assign them to a product (Product data > "
 "Size guide). Each chart is a simple labelled table."
 msgstr ""
-"Erstelle hier wiederverwendbare Diagramme und weise diese dann einem Produkt "
-"zu (Produktdaten > Größentabelle). Jedes Diagramm ist eine einfache "
+"Erstelle hier wiederverwendbare Diagramme und weise diese dann einem Produkt"
+" zu (Produktdaten > Größentabelle). Jedes Diagramm ist eine einfache "
 "beschriftete Tabelle."
 
 #: src/Admin/SettingsPage.php:318
@@ -281,6 +273,12 @@ msgstr "Es sind noch keine Größeninformationen verfügbar."
 #: templates/single-product/dialog.php:36
 msgid "Close size guide"
 msgstr "Schließe die Größentabelle"
+
+#~ msgid "Wkrótce"
+#~ msgstr "Demnächst"
+
+#~ msgid "Powiadom mnie"
+#~ msgstr "Benachrichtige mich"
 
 #~ msgid "https://plogins.com/sizer/"
 #~ msgstr "https://plogins.com/de/sizer/"
