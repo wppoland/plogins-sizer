@@ -4,7 +4,7 @@ Tags: woocommerce, size guide, size chart, product, fashion
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -15,7 +15,7 @@ Add size guides and size charts to your WooCommerce products via an accessible m
 
 Mezuro adds a "Size guide" button to your WooCommerce product pages. Shoppers click it and a size chart opens in a modal, so they can check measurements without leaving the product.
 
-You build each chart once in the admin (a labelled table of columns and rows, plus an optional caption) and assign it to whichever products it applies to. The button is injected right after the add-to-cart button. If a product has no chart assigned, nothing is added to the page.
+You build each chart once in the admin (a labelled table of columns and rows, plus an optional caption) and assign it to whichever products it applies to. The button is injected right after the add-to-cart button, or, for a product that is out of stock or has no price and so has no add-to-cart button, in the product summary. If a product has no chart assigned, nothing is added to the page.
 
 Source and bug reports live on GitHub: [github.com/wppoland/plogins-sizer](https://github.com/wppoland/plogins-sizer)
 
@@ -51,7 +51,7 @@ Yes. Mezuro extends WooCommerce single product pages.
 
 = Where does the size guide appear? =
 
-On the single product page, as a button shown after the add-to-cart button. The button opens the chart in an accessible modal.
+On the single product page, as a button shown after the add-to-cart button. A product that is out of stock or has no price has no add-to-cart button, so there the button is shown in the product summary instead. The button opens the chart in an accessible modal.
 
 = Can I override the styling? =
 
@@ -68,7 +68,7 @@ Yes. Build a chart once under WooCommerce > Size Guides, then assign it on each 
 
 = Does this plugin work on WordPress Multisite? =
 
-Yes. This plugin is compatible with WordPress Multisite. Network activate it or activate it on individual sites; each site keeps its own settings and data.
+Yes. This plugin is compatible with WordPress Multisite. Network activate it or activate it on individual sites; each site keeps its own settings and data. Deleting the plugin from the network removes the charts and settings from every site.
 
 == Screenshots ==
 
@@ -84,6 +84,10 @@ Mezuro does not connect to any external services. It makes no API calls and load
 Mezuro is fully translatable and ships the `mezuro.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.4 =
+* The size guide now shows on products that are out of stock or have no price. WooCommerce prints no add-to-cart button for those, and the size guide only hung off that button, so a shopper checking whether a sold-out size would fit got no chart.
+* Deleting the plugin from a Multisite network removes the charts and settings from every site, not only the main one.
 
 = 1.1.3 =
 * The upgrade notice's "Coming soon" and "Get notified" labels are English source strings for every language; Polish sites used to get their own Polish source text, which translators in other languages then saw untranslated.
