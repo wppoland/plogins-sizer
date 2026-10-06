@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sizer - Size Guide and Charts for WooCommerce 0.1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/sizer\n"
-"POT-Creation-Date: 2026-09-26T04:48:59+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mezuro\n"
+"POT-Creation-Date: 2026-10-05T11:15:20+00:00\n"
 "PO-Revision-Date: 2026-06-16T20:23:05+00:00\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -24,7 +24,7 @@ msgstr "Mezuro - Guía de tallas y tablas para WooCommerce"
 #. Plugin URI of the plugin
 #: mezuro.php
 msgid "https://plogins.com/plogins-sizer/"
-msgstr ""
+msgstr "https://plogins.com/plogins-sizer/"
 
 #. Description of the plugin
 #: mezuro.php
@@ -38,16 +38,16 @@ msgstr ""
 #. Author of the plugin
 #: mezuro.php
 msgid "WPPoland.com"
-msgstr ""
+msgstr "WPPoland.com"
 
 #. Author URI of the plugin
 #: mezuro.php
 msgid "https://wppoland.com"
-msgstr ""
+msgstr "https://wppoland.com"
 
 #: mezuro.php:55
 msgid "Mezuro requires WooCommerce to be active."
-msgstr ""
+msgstr "Mezuro requiere que WooCommerce esté activo."
 
 #: src/Admin/Assignment.php:42 src/Service/Texts.php:37
 msgid "Size guide"
@@ -71,10 +71,6 @@ msgstr ""
 "ocultar la guía de tallas aquí."
 
 #: src/Admin/ProUpsell.php:85
-msgid "Wkrótce"
-msgstr "Próximamente"
-
-#: src/Admin/ProUpsell.php:85
 msgid "Coming soon"
 msgstr "Próximamente"
 
@@ -87,10 +83,6 @@ msgstr "desde %1$s%2$d/año"
 #: src/Admin/ProUpsell.php:100
 msgid "Upgrade to PRO"
 msgstr "Mejora a PRO"
-
-#: src/Admin/ProUpsell.php:101
-msgid "Powiadom mnie"
-msgstr "Avísame"
 
 #: src/Admin/ProUpsell.php:101
 msgid "Get notified"
@@ -180,8 +172,8 @@ msgstr "Encabezado emergente"
 #: src/Admin/SettingsPage.php:145
 msgid ""
 "The clickable text shown on the product page that opens the chart. Keep it "
-"short, “Size guide”, “Size chart” or “Find my fit” all read well next to the "
-"price."
+"short, “Size guide”, “Size chart” or “Find my fit” all read well next to the"
+" price."
 msgstr ""
 "El texto en el que se puede hacer clic que se muestra en la página del "
 "producto que abre el gráfico. Sea breve: \"Guía de tallas\", \"Tabla de "
@@ -279,6 +271,12 @@ msgstr "Aún no hay información sobre el tamaño disponible."
 #: templates/single-product/dialog.php:36
 msgid "Close size guide"
 msgstr "Cerrar guía de tallas"
+
+#~ msgid "Wkrótce"
+#~ msgstr "Próximamente"
+
+#~ msgid "Powiadom mnie"
+#~ msgstr "Avísame"
 
 #~ msgid "https://plogins.com/sizer/"
 #~ msgstr "https://plogins.com/es/sizer/"
