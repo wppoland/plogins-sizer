@@ -1,6 +1,6 @@
 <?php
 /**
- * Mezuro uninstall routine.
+ * Sizavo uninstall routine.
  *
  * Removes plugin options, on every site of a network, when the user deletes
  * the plugin. Per-product assignments live in post meta; we leave those alone so a reinstall keeps
