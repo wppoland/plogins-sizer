@@ -14,7 +14,7 @@
 
 declare(strict_types=1);
 
-define('WP_UNINSTALL_PLUGIN', 'mezuro/mezuro.php');
+define('WP_UNINSTALL_PLUGIN', 'sizavo/sizavo.php');
 
 $GLOBALS['multisite'] = false;
 $GLOBALS['blog']      = 1;

@@ -1,4 +1,4 @@
-=== Mezuro - Size Guide for WooCommerce ===
+=== Sizavo - Size Guide for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, size guide, size chart, product, fashion
 Requires at least: 6.5
@@ -13,7 +13,7 @@ Add size guides and size charts to your WooCommerce products via an accessible m
 
 == Description ==
 
-Mezuro adds a "Size guide" button to your WooCommerce product pages. Shoppers click it and a size chart opens in a modal, so they can check measurements without leaving the product.
+Sizavo adds a "Size guide" button to your WooCommerce product pages. Shoppers click it and a size chart opens in a modal, so they can check measurements without leaving the product.
 
 You build each chart once in the admin (a labelled table of columns and rows, plus an optional caption) and assign it to whichever products it applies to. The button is injected right after the add-to-cart button, or, for a product that is out of stock or has no price and so has no add-to-cart button, in the product summary. If a product has no chart assigned, nothing is added to the page.
 
@@ -30,7 +30,7 @@ Source and bug reports live on GitHub: [github.com/wppoland/plogins-sizer](https
 
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/mezuro`, or install via Plugins > Add New.
+1. Upload the plugin to `/wp-content/plugins/sizavo`, or install via Plugins > Add New.
 2. Activate it. WooCommerce must be active.
 3. Go to WooCommerce > Size Guides to create a chart and set the button label.
 4. Assign a chart on a product (Product data > Size guide).
@@ -47,7 +47,7 @@ Source and bug reports live on GitHub: [github.com/wppoland/plogins-sizer](https
 
 = Does it require WooCommerce? =
 
-Yes. Mezuro extends WooCommerce single product pages.
+Yes. Sizavo extends WooCommerce single product pages.
 
 = Where does the size guide appear? =
 
@@ -77,11 +77,11 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 
 == External Services ==
 
-Mezuro does not connect to any external services. It makes no API calls and loads no remote scripts, fonts, or stylesheets. Your size charts and button/heading settings are stored in your own WordPress database (the `sizer_charts` and `sizer_settings` options), and each product's assigned chart is kept in that product's `_sizer_chart_id` post meta. No data leaves your site, and nothing is tracked.
+Sizavo does not connect to any external services. It makes no API calls and loads no remote scripts, fonts, or stylesheets. Your size charts and button/heading settings are stored in your own WordPress database (the `sizer_charts` and `sizer_settings` options), and each product's assigned chart is kept in that product's `_sizer_chart_id` post meta. No data leaves your site, and nothing is tracked.
 
 == Translations ==
 
-Mezuro is fully translatable and ships the `mezuro.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
+Sizavo is fully translatable and ships the `sizavo.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
 
@@ -101,7 +101,7 @@ Mezuro is fully translatable and ships the `mezuro.pot` template. Translations a
 * The sidebar upgrade promo follows the banner's dismissal, so dismissing it no longer leaves a permanent advert on the screen.
 
 = 1.1.0 =
-* Renamed to Mezuro. The WordPress.org review team asks a plugin name to lead with a distinctive, coined identifier rather than a generic descriptive word. Mezuro is Esperanto for a measure. The text domain follows the name; the stored charts, the settings, the `sizer/` template override folder and every hook are unchanged.
+* Renamed to Sizavo. The WordPress.org review team asks a plugin name to lead with a distinctive, coined identifier rather than a generic descriptive word. Sizavo is Esperanto for a measure. The text domain follows the name; the stored charts, the settings, the `sizer/` template override folder and every hook are unchanged.
 
 = 1.0.13 =
 * Fixed: the PRO upgrade promo kept selling to people who had already bought the paid edition. Only the banner could be dismissed, so the sidebar promo and the locked feature cards followed a paying customer around for good. The promo now checks whether the paid edition is active and steps aside when it is.

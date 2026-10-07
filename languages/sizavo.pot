@@ -2,8 +2,8 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Mezuro - Size Guide for WooCommerce 1.1.3\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mezuro\n"
+"Project-Id-Version: Sizavo - Size Guide for WooCommerce 1.1.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/sizavo\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -12,35 +12,35 @@ msgstr ""
 "POT-Creation-Date: 2026-10-05T11:15:20+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: mezuro\n"
+"X-Domain: sizavo\n"
 
 #. Plugin Name of the plugin
-#: mezuro.php
-msgid "Mezuro - Size Guide for WooCommerce"
+#: sizavo.php
+msgid "Sizavo - Size Guide for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin
-#: mezuro.php
+#: sizavo.php
 msgid "https://plogins.com/plogins-sizer/"
 msgstr ""
 
 #. Description of the plugin
-#: mezuro.php
+#: sizavo.php
 msgid "Add size guides and size charts to your WooCommerce products via an accessible modal."
 msgstr ""
 
 #. Author of the plugin
-#: mezuro.php
+#: sizavo.php
 msgid "WPPoland.com"
 msgstr ""
 
 #. Author URI of the plugin
-#: mezuro.php
+#: sizavo.php
 msgid "https://wppoland.com"
 msgstr ""
 
-#: mezuro.php:55
-msgid "Mezuro requires WooCommerce to be active."
+#: sizavo.php:55
+msgid "Sizavo requires WooCommerce to be active."
 msgstr ""
 
 #: src/Admin/Assignment.php:42
@@ -109,7 +109,7 @@ msgid "What %s adds"
 msgstr ""
 
 #: src/Admin/SettingsPage.php:55
-msgid "Mezuro: size guides"
+msgid "Sizavo: size guides"
 msgstr ""
 
 #: src/Admin/SettingsPage.php:56

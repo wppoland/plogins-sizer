@@ -34,7 +34,7 @@ final class Texts
     public static function defaults(): array
     {
         return [
-            'trigger_label' => __('Size guide', 'mezuro'),
+            'trigger_label' => __('Size guide', 'sizavo'),
         ];
     }
 
