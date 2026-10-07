@@ -4,7 +4,7 @@ includes:
 parameters:
     level: 6
     paths:
-        - mezuro.php
+        - sizavo.php
         - src
         - config
     excludePaths:

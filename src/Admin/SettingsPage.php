@@ -52,8 +52,8 @@ final class SettingsPage implements HasHooks
     {
         add_submenu_page(
             'woocommerce',
-            __('Mezuro: size guides', 'mezuro'),
-            __('Size Guides', 'mezuro'),
+            __('Sizavo: size guides', 'sizavo'),
+            __('Size Guides', 'sizavo'),
             'manage_woocommerce',
             self::PAGE,
             [$this, 'render'],
@@ -83,11 +83,11 @@ final class SettingsPage implements HasHooks
 
         wp_localize_script('sizer-admin', 'sizerAdmin', [
             'i18n' => [
-                'confirmDelete' => __('Delete this size chart? This cannot be undone.', 'mezuro'),
-                'columnLabel'   => __('Column heading', 'mezuro'),
-                'removeColumn'  => __('Remove column', 'mezuro'),
-                'removeRow'     => __('Remove row', 'mezuro'),
-                'cell'          => __('Cell value', 'mezuro'),
+                'confirmDelete' => __('Delete this size chart? This cannot be undone.', 'sizavo'),
+                'columnLabel'   => __('Column heading', 'sizavo'),
+                'removeColumn'  => __('Remove column', 'sizavo'),
+                'removeRow'     => __('Remove row', 'sizavo'),
+                'cell'          => __('Cell value', 'sizavo'),
             ],
         ]);
     }
@@ -117,18 +117,18 @@ final class SettingsPage implements HasHooks
 
         add_settings_section(
             self::SECTION,
-            __('How the size guide appears', 'mezuro'),
+            __('How the size guide appears', 'sizavo'),
             static function (): void {
                 echo '<p class="sizer-section-lead">' . esc_html__(
                     'On any product with a chart assigned, shoppers see a “Size guide” link just below the add-to-cart button. Selecting it opens an accessible pop-up that shows the chart. These two settings control the wording shoppers see, leave them as they are and the guide works out of the box.',
-                    'mezuro',
+                    'sizavo',
                 ) . '</p>';
             },
             self::PAGE,
         );
 
-        add_settings_field('trigger_label', __('Link wording', 'mezuro'), [$this, 'fieldTriggerLabel'], self::PAGE, self::SECTION);
-        add_settings_field('modal_title', __('Pop-up heading', 'mezuro'), [$this, 'fieldModalTitle'], self::PAGE, self::SECTION);
+        add_settings_field('trigger_label', __('Link wording', 'sizavo'), [$this, 'fieldTriggerLabel'], self::PAGE, self::SECTION);
+        add_settings_field('modal_title', __('Pop-up heading', 'sizavo'), [$this, 'fieldModalTitle'], self::PAGE, self::SECTION);
     }
 
     public function fieldTriggerLabel(): void
@@ -144,7 +144,7 @@ final class SettingsPage implements HasHooks
         );
         echo '<p class="description">' . esc_html__(
             'The clickable text shown on the product page that opens the chart. Keep it short, “Size guide”, “Size chart” or “Find my fit” all read well next to the price.',
-            'mezuro',
+            'sizavo',
         ) . '</p>';
         $this->renderTriggerPreview();
     }
@@ -159,7 +159,7 @@ final class SettingsPage implements HasHooks
         );
         echo '<p class="description">' . esc_html__(
             'The title shown at the top of the pop-up once it opens. Leave it blank to reuse the link wording above.',
-            'mezuro',
+            'sizavo',
         ) . '</p>';
     }
 
@@ -170,7 +170,7 @@ final class SettingsPage implements HasHooks
     private function renderTriggerPreview(): void
     {
         echo '<p class="sizer-preview" aria-hidden="true">';
-        echo '<span class="sizer-preview-label">' . esc_html__('Preview', 'mezuro') . '</span>';
+        echo '<span class="sizer-preview-label">' . esc_html__('Preview', 'sizavo') . '</span>';
         echo '<span class="sizer-preview-trigger">' . esc_html($this->settings->triggerLabel()) . '</span>';
         echo '</p>';
     }
@@ -201,7 +201,7 @@ final class SettingsPage implements HasHooks
     public function handleChartSave(): void
     {
         if (! current_user_can('manage_woocommerce')) {
-            wp_die(esc_html__('You are not allowed to manage size charts.', 'mezuro'));
+            wp_die(esc_html__('You are not allowed to manage size charts.', 'sizavo'));
         }
 
         check_admin_referer(self::SAVE_ACTION);
@@ -257,13 +257,13 @@ final class SettingsPage implements HasHooks
             '<a href="%1$s" class="nav-tab %2$s">%3$s</a>',
             esc_url($base . '&tab=settings'),
             'settings' === $tab ? 'nav-tab-active' : '',
-            esc_html__('Settings', 'mezuro'),
+            esc_html__('Settings', 'sizavo'),
         );
         printf(
             '<a href="%1$s" class="nav-tab %2$s">%3$s</a>',
             esc_url($base . '&tab=charts'),
             'charts' === $tab ? 'nav-tab-active' : '',
-            esc_html__('Size charts', 'mezuro'),
+            esc_html__('Size charts', 'sizavo'),
         );
         echo '</nav>';
 
@@ -298,7 +298,7 @@ final class SettingsPage implements HasHooks
         // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only view parameter, only the value '1' is accepted.
         $updated = isset($_GET['updated']) ? sanitize_key((string) wp_unslash($_GET['updated'])) : '';
         if ('1' === $updated) {
-            echo '<div class="notice notice-success is-dismissible"><p>' . esc_html__('Size charts saved.', 'mezuro') . '</p></div>';
+            echo '<div class="notice notice-success is-dismissible"><p>' . esc_html__('Size charts saved.', 'sizavo') . '</p></div>';
         }
 
         $charts = array_values($this->charts->all());
@@ -309,7 +309,7 @@ final class SettingsPage implements HasHooks
 
         echo '<p class="description sizer-charts-intro">' . esc_html__(
             'Build reusable charts here, then assign them to a product (Product data > Size guide). Each chart is a simple labelled table.',
-            'mezuro',
+            'sizavo',
         ) . '</p>';
 
         echo '<div id="sizer-charts" class="sizer-charts">';
@@ -317,7 +317,7 @@ final class SettingsPage implements HasHooks
         if (empty($charts)) {
             echo '<p class="sizer-empty" id="sizer-charts-empty">' . esc_html__(
                 'No size charts yet. Add your first one below.',
-                'mezuro',
+                'sizavo',
             ) . '</p>';
         }
 
@@ -328,7 +328,7 @@ final class SettingsPage implements HasHooks
         echo '</div>';
 
         echo '<p class="sizer-charts-actions">';
-        echo '<button type="button" class="button button-secondary" id="sizer-add-chart">' . esc_html__('+ Add size chart', 'mezuro') . '</button>';
+        echo '<button type="button" class="button button-secondary" id="sizer-add-chart">' . esc_html__('+ Add size chart', 'sizavo') . '</button>';
         echo '</p>';
 
         // Hidden template for JS-cloned new charts (index __i__).
@@ -336,7 +336,7 @@ final class SettingsPage implements HasHooks
         $this->renderChartEditor(0, ['id' => '', 'name' => '', 'caption' => '', 'columns' => ['', ''], 'rows' => [['', '']]], '__i__');
         echo '</template>';
 
-        submit_button(__('Save charts', 'mezuro'));
+        submit_button(__('Save charts', 'sizavo'));
         echo '</form>';
     }
 
@@ -356,7 +356,7 @@ final class SettingsPage implements HasHooks
         $col_n   = count($columns);
 
         echo '<fieldset class="sizer-chart-card" data-chart>';
-        echo '<legend class="screen-reader-text">' . esc_html__('Size chart', 'mezuro') . '</legend>';
+        echo '<legend class="screen-reader-text">' . esc_html__('Size chart', 'sizavo') . '</legend>';
 
         echo '<div class="sizer-chart-head">';
         printf(
@@ -366,19 +366,19 @@ final class SettingsPage implements HasHooks
         );
         printf(
             '<label class="sizer-field"><span>%1$s</span><input type="text" name="%2$s[name]" value="%3$s" class="regular-text" required placeholder="%4$s" /></label>',
-            esc_html__('Chart name', 'mezuro'),
+            esc_html__('Chart name', 'sizavo'),
             esc_attr($name),
             esc_attr($chart['name']),
-            esc_attr__("e.g. Men's T-Shirts", 'mezuro'),
+            esc_attr__("e.g. Men's T-Shirts", 'sizavo'),
         );
         printf(
             '<label class="sizer-field"><span>%1$s</span><input type="text" name="%2$s[caption]" value="%3$s" class="regular-text" placeholder="%4$s" /></label>',
-            esc_html__('Caption (optional)', 'mezuro'),
+            esc_html__('Caption (optional)', 'sizavo'),
             esc_attr($name),
             esc_attr($chart['caption']),
-            esc_attr__('e.g. All measurements in cm', 'mezuro'),
+            esc_attr__('e.g. All measurements in cm', 'sizavo'),
         );
-        echo '<button type="button" class="button-link sizer-delete-chart" data-confirm aria-label="' . esc_attr__('Delete chart', 'mezuro') . '">' . esc_html__('Delete', 'mezuro') . '</button>';
+        echo '<button type="button" class="button-link sizer-delete-chart" data-confirm aria-label="' . esc_attr__('Delete chart', 'sizavo') . '">' . esc_html__('Delete', 'sizavo') . '</button>';
         echo '</div>';
 
         echo '<div class="sizer-table-wrap">';
@@ -392,12 +392,12 @@ final class SettingsPage implements HasHooks
                 esc_attr($name),
                 (int) $c,
                 esc_attr((string) $col),
-                esc_attr__('Column heading', 'mezuro'),
-                esc_attr__('Size', 'mezuro'),
-                esc_attr__('Remove column', 'mezuro'),
+                esc_attr__('Column heading', 'sizavo'),
+                esc_attr__('Size', 'sizavo'),
+                esc_attr__('Remove column', 'sizavo'),
             );
         }
-        echo '<th class="sizer-col-add"><button type="button" class="button sizer-add-col" aria-label="' . esc_attr__('Add column', 'mezuro') . '">+</button></th>';
+        echo '<th class="sizer-col-add"><button type="button" class="button sizer-add-col" aria-label="' . esc_attr__('Add column', 'sizavo') . '">+</button></th>';
         echo '</tr></thead>';
 
         echo '<tbody data-rows>';
@@ -411,17 +411,17 @@ final class SettingsPage implements HasHooks
                     (int) $r,
                     (int) $c,
                     esc_attr($cell),
-                    esc_attr__('Cell value', 'mezuro'),
+                    esc_attr__('Cell value', 'sizavo'),
                 );
             }
-            echo '<td class="sizer-row-remove"><button type="button" class="button-link sizer-remove-row" aria-label="' . esc_attr__('Remove row', 'mezuro') . '">&times;</button></td>';
+            echo '<td class="sizer-row-remove"><button type="button" class="button-link sizer-remove-row" aria-label="' . esc_attr__('Remove row', 'sizavo') . '">&times;</button></td>';
             echo '</tr>';
         }
         echo '</tbody>';
         echo '</table>';
         echo '</div>';
 
-        echo '<p><button type="button" class="button sizer-add-row">' . esc_html__('+ Add row', 'mezuro') . '</button></p>';
+        echo '<p><button type="button" class="button sizer-add-row">' . esc_html__('+ Add row', 'sizavo') . '</button></p>';
 
         echo '</fieldset>';
     }

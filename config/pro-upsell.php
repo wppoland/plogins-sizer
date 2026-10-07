@@ -10,7 +10,7 @@
 defined('ABSPATH') || exit;
 
 return [
-    'name'       => 'Mezuro Pro',
+    'name'       => 'Sizavo Pro',
     'url'        => 'https://plogins.com/plogins-sizer-pro/pricing/',
     'sellable'   => true,
     'price_from' => 29,
