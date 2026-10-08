@@ -39,7 +39,7 @@ final class Assignment implements HasHooks
     public function addProductTab(array $tabs): array
     {
         $tabs['sizer'] = [
-            'label'    => __('Size guide', 'mezuro'),
+            'label'    => __('Size guide', 'sizavo'),
             'target'   => 'sizer_product_data',
             'class'    => [],
             'priority' => 65,
@@ -62,10 +62,10 @@ final class Assignment implements HasHooks
         echo '<div class="options_group">';
         $this->selectField(
             ChartResolver::PRODUCT_META,
-            __('Size chart', 'mezuro'),
+            __('Size chart', 'sizavo'),
             $current,
-            __('- No chart -', 'mezuro'),
-            __('Choose a chart to show on this product, or leave it blank to hide the size guide here.', 'mezuro'),
+            __('- No chart -', 'sizavo'),
+            __('Choose a chart to show on this product, or leave it blank to hide the size guide here.', 'sizavo'),
         );
         echo '</div>';
         echo '</div>';
