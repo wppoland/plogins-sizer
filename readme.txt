@@ -28,6 +28,32 @@ Source and bug reports live on GitHub: [github.com/wppoland/plogins-sizer](https
 * Stylesheet uses CSS custom properties (accent colour, radius, dialog colours) and includes a dark-scheme and reduced-motion variant.
 * No external requests and no tracking; charts are stored in your own database.
 
+== Sizavo Pro ==
+
+Sizavo Pro is a separate paid plugin that extends Sizavo.
+
+Included in Sizavo:
+
+* Reusable size charts
+* Per-product assignment
+* Accessible modal
+* No external requests
+* Configurable button text
+
+Sizavo Pro adds:
+
+* Store-wide default chart
+* Per-variation charts
+* Unit switching
+* Find my size
+* Import / export
+
+The free edition is not a trial and its features stay available without a time limit.
+
+* **Sizavo Pro** - [plogins.com/plogins-sizer-pro/](https://plogins.com/plogins-sizer-pro/)
+* **Compare editions and pricing** - [plogins.com/plogins-sizer-pro/pricing/](https://plogins.com/plogins-sizer-pro/pricing/)
+* **PRO documentation** - [plogins.com/plogins-sizer-pro/docs/](https://plogins.com/plogins-sizer-pro/docs/)
+
 == Installation ==
 
 1. Upload the plugin to `/wp-content/plugins/sizavo`, or install via Plugins > Add New.
