@@ -23,8 +23,8 @@ msgstr "Sizavo - Größenleitfaden und Diagramme für WooCommerce"
 
 #. Plugin URI of the plugin
 #: sizavo.php
-msgid "https://plogins.com/plogins-sizer/"
-msgstr "https://plogins.com/plogins-sizer/"
+msgid "https://plogins.com/sizavo/"
+msgstr "https://plogins.com/sizavo/"
 
 #. Description of the plugin
 #: sizavo.php
