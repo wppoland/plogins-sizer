@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name:       Sizavo - Size Guide for WooCommerce
- * Plugin URI:        https://plogins.com/plogins-sizer/
+ * Plugin URI:        https://plogins.com/sizavo/
  * Description:        Add size guides and size charts to your WooCommerce products via an accessible modal.
- * Version:           1.1.4
+ * Version:           1.1.5
  * Requires at least: 6.5
  * Requires PHP:      8.1
  * Requires Plugins:  woocommerce
@@ -25,7 +25,7 @@ namespace Sizer;
 
 defined('ABSPATH') || exit;
 
-const VERSION     = '1.1.4';
+const VERSION     = '1.1.5';
 const PLUGIN_FILE = __FILE__;
 const PLUGIN_DIR  = __DIR__;
 

@@ -4,7 +4,7 @@ Tags: woocommerce, size guide, size chart, product, fashion
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -17,7 +17,7 @@ Sizavo adds a "Size guide" button to your WooCommerce product pages. Shoppers cl
 
 You build each chart once in the admin (a labelled table of columns and rows, plus an optional caption) and assign it to whichever products it applies to. The button is injected right after the add-to-cart button, or, for a product that is out of stock or has no price and so has no add-to-cart button, in the product summary. If a product has no chart assigned, nothing is added to the page.
 
-Source and bug reports live on GitHub: [github.com/wppoland/plogins-sizer](https://github.com/wppoland/plogins-sizer)
+Source and bug reports live on GitHub: [github.com/wppoland/sizavo](https://github.com/wppoland/sizavo)
 
 **What it does**
 
@@ -50,9 +50,9 @@ Sizavo Pro adds:
 
 The free edition is not a trial and its features stay available without a time limit.
 
-* **Sizavo Pro** - [plogins.com/plogins-sizer-pro/](https://plogins.com/plogins-sizer-pro/)
-* **Compare editions and pricing** - [plogins.com/plogins-sizer-pro/pricing/](https://plogins.com/plogins-sizer-pro/pricing/)
-* **PRO documentation** - [plogins.com/plogins-sizer-pro/docs/](https://plogins.com/plogins-sizer-pro/docs/)
+* **Sizavo Pro** - [plogins.com/sizavo-pro/](https://plogins.com/sizavo-pro/)
+* **Compare editions and pricing** - [plogins.com/sizavo-pro/pricing/](https://plogins.com/sizavo-pro/pricing/)
+* **PRO documentation** - [plogins.com/sizavo-pro/docs/](https://plogins.com/sizavo-pro/docs/)
 
 == Installation ==
 
@@ -65,10 +65,10 @@ The free edition is not a trial and its features stay available without a time l
 
 = Documentation and links =
 
-* **Documentation**: [plogins.com/plogins-sizer/docs/](https://plogins.com/plogins-sizer/docs/)
-* **Plugin page**: [plogins.com/plogins-sizer/](https://plogins.com/plogins-sizer/)
-* **Source code**: [github.com/wppoland/plogins-sizer](https://github.com/wppoland/plogins-sizer)
-* **Bug reports and feature requests**: [github.com/wppoland/plogins-sizer/issues](https://github.com/wppoland/plogins-sizer/issues)
+* **Documentation**: [plogins.com/sizavo/docs/](https://plogins.com/sizavo/docs/)
+* **Plugin page**: [plogins.com/sizavo/](https://plogins.com/sizavo/)
+* **Source code**: [github.com/wppoland/sizavo](https://github.com/wppoland/sizavo)
+* **Bug reports and feature requests**: [github.com/wppoland/sizavo/issues](https://github.com/wppoland/sizavo/issues)
 
 
 = Does it require WooCommerce? =
@@ -110,6 +110,9 @@ Sizavo does not connect to any external services. It makes no API calls and load
 Sizavo is fully translatable and ships the `sizavo.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.5 =
+* Links point at the new plogins.com address and the renamed GitHub repository.
 
 = 1.1.4 =
 * The size guide now shows on products that are out of stock or have no price. WooCommerce prints no add-to-cart button for those, and the size guide only hung off that button, so a shopper checking whether a sold-out size would fit got no chart.
